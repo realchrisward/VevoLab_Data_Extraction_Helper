@@ -1,0 +1,1040 @@
+"FUJIFILM VisualSonics Measurement Export"
+"Institution","BCM"
+"Report Date","3/4/2021"
+
+"Version Information"
+"Company Name","Model","SW Version","SW Build","Report Version"
+"FUJIFILM VisualSonics, Inc.","Vevo LAB","2.2.0","12088","8"
+
+"Study","1"
+"Study Name","12042020XWehrens"
+"Owner User Name","Chris"
+"Granting Institution",""
+"Study Date","12/4/2020"
+"Study Time","1:33:15 PM"
+"Study Notes",""
+
+
+"Series Name","Series 6"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","2:47:29 PM"
+"Animal ID","105"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","22.8"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","693.841668","22.809053","668.954951","698.819011","713.751041",
+"MV E","PW Doppler Mode","Velocity","mm/s","937.731494","29.864060","967.595554","907.867433","937.731494",
+
+Calculation,,Units,
+"MV E/A",,"none",1.351506,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","492.166012","5.114354","488.549618","495.782407",
+"LV Trace","M-Mode","Diameter;s","mm","5.142741","1.932374E-02","5.156405","5.129077",
+"LV Trace","M-Mode","Diameter;d","mm","6.017206","8.615694E-03","6.023298","6.011113",
+"LV Trace","M-Mode","Volume;s","uL","126.240975","1.093482","127.014183","125.467766",
+"LV Trace","M-Mode","Volume;d","uL","181.186020","0.593982","181.606028","180.766011",
+"LV Trace","M-Mode","Stroke Volume","uL","54.945045","0.499500","54.591845","55.298245",
+"LV Trace","M-Mode","Ejection Fraction","%","30.325827","0.375101","30.060591","30.591063",
+"LV Trace","M-Mode","Fractional Shortening","%","14.532879","0.198766","14.392330","14.673427",
+"LV Trace","M-Mode","Cardiac Output","mL/min","27.048082","0.533522","26.670825","27.425339",
+"LVAW;d","M-Mode","Depth","mm","0.673276","0.120696","0.587931","0.758621",
+"LVAW;s","M-Mode","Depth","mm","0.891379","0.107285","0.815517","0.967241",
+"LVID;d","M-Mode","Depth","mm","6.040517","1.341065E-02","6.050000","6.031034",
+"LVID;s","M-Mode","Depth","mm","5.158621","N/A","5.158621","5.158621",
+"LVPW;d","M-Mode","Depth","mm","0.426724","1.341065E-02","0.417241","0.436207",
+"LVPW;s","M-Mode","Depth","mm","0.616379","0.120696","0.531034","0.701724",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",27.048082,
+"Diameter;d (LV Trace)",,"mm",6.017206,
+"Diameter;s (LV Trace)",,"mm",5.142741,
+"EF",,"%",30.448739,
+"EF (LV Trace)",,"%",30.325827,
+"FS",,"%",14.599677,
+"FS (LV Trace)",,"%",14.532879,
+"LV Mass AW",,"mg",151.282370,
+"LV Mass AW (Corrected)",,"mg",121.025896,
+"LV Vol;d",,"uL",182.789533,
+"LV Vol;s",,"uL",127.132426,
+"SV (LV Trace)",,"uL",54.945045,
+"V;d (LV Trace)",,"uL",181.186020,
+"V;s (LV Trace)",,"uL",126.240975,
+
+
+
+"Series Name","Series 3"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","2:03:38 PM"
+"Animal ID","107"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","27.1"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","623.163377","17.242023","633.118064","603.254004","633.118064",
+"MV E","PW Doppler Mode","Velocity","mm/s","966.600063","8.621011","976.554750","961.622720","961.622720",
+
+Calculation,,Units,
+"MV E/A",,"none",1.551118,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","513.113429","4.395540","510.005313","516.221545",
+"LV Trace","M-Mode","Diameter;s","mm","3.901465","0.177987","3.775609","4.027321",
+"LV Trace","M-Mode","Diameter;d","mm","5.037498","0.330457","4.803830","5.271166",
+"LV Trace","M-Mode","Volume;s","uL","66.085823","7.154328","61.026949","71.144697",
+"LV Trace","M-Mode","Volume;d","uL","120.693848","18.321261","107.738760","133.648935",
+"LV Trace","M-Mode","Stroke Volume","uL","54.608024","11.166933","46.711811","62.504238",
+"LV Trace","M-Mode","Ejection Fraction","%","45.062015","2.411891","43.356551","46.767479",
+"LV Trace","M-Mode","Fractional Shortening","%","22.500674","1.550663","21.404190","23.597159",
+"LV Trace","M-Mode","Cardiac Output","mL/min","28.044653","5.969935","23.823272","32.266035",
+"LVAW;d","M-Mode","Depth","mm","0.436207","2.682129E-02","0.455172","0.417241",
+"LVAW;s","M-Mode","Depth","mm","0.787069","6.705323E-02","0.739655","0.834483",
+"LVID;d","M-Mode","Depth","mm","4.987931","0.375498","4.722414","5.253448",
+"LVID;s","M-Mode","Depth","mm","3.916379","0.227981","3.755172","4.077586",
+"LVPW;d","M-Mode","Depth","mm","0.635345","0.093875","0.701724","0.568966",
+"LVPW;s","M-Mode","Depth","mm","1.175862","8.046388E-02","1.118966","1.232759",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",28.044653,
+"Diameter;d (LV Trace)",,"mm",5.037498,
+"Diameter;s (LV Trace)",,"mm",3.901465,
+"EF",,"%",43.382919,
+"EF (LV Trace)",,"%",45.062015,
+"FS",,"%",21.482895,
+"FS (LV Trace)",,"%",22.500674,
+"LV Mass AW",,"mg",103.605780,
+"LV Mass AW (Corrected)",,"mg",82.884624,
+"LV Vol;d",,"uL",117.580830,
+"LV Vol;s",,"uL",66.570834,
+"SV (LV Trace)",,"uL",54.608024,
+"V;d (LV Trace)",,"uL",120.693848,
+"V;s (LV Trace)",,"uL",66.085823,
+
+
+
+"Series Name","Series 8"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","3:14:12 PM"
+"Animal ID","101"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","20.6"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","639.090680","53.838183","698.818781","624.158655","594.294605",
+"MV E","PW Doppler Mode","Velocity","mm/s","1719.173839","70.565998","1773.924598","1639.536371","1744.060548",
+
+Calculation,,Units,
+"MV E/A",,"none",2.690031,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","476.412867","11.698975","468.140442","484.685291",
+"LV Trace","M-Mode","Diameter;s","mm","3.451633","0.428064","3.148945","3.754320",
+"LV Trace","M-Mode","Diameter;d","mm","4.408367","0.372865","4.144711","4.672022",
+"LV Trace","M-Mode","Volume;s","uL","49.878035","14.831262","39.390749","60.365321",
+"LV Trace","M-Mode","Volume;d","uL","88.576756","17.562021","76.158531","100.994980",
+"LV Trace","M-Mode","Stroke Volume","uL","38.698721","2.730759","36.767783","40.629659",
+"LV Trace","M-Mode","Ejection Fraction","%","44.253671","5.691200","48.277957","40.229385",
+"LV Trace","M-Mode","Fractional Shortening","%","21.833743","3.098868","24.024974","19.642512",
+"LV Trace","M-Mode","Cardiac Output","mL/min","18.452542","1.753704","17.212486","19.692598",
+"LVAW;d","M-Mode","Depth","mm","0.616379","9.387452E-02","0.682759","0.550000",
+"LVAW;s","M-Mode","Depth","mm","0.806034","0.254802","0.986207","0.625862",
+"LVID;d","M-Mode","Depth","mm","4.352586","0.362087","4.096552","4.608621",
+"LVID;s","M-Mode","Depth","mm","3.812069","0.831460","3.224138","4.400000",
+"LVPW;d","M-Mode","Depth","mm","0.625862","0.107285","0.701724","0.550000",
+"LVPW;s","M-Mode","Depth","mm","0.758621","0.375498","1.024138","0.493103",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",18.452542,
+"Diameter;d (LV Trace)",,"mm",4.408367,
+"Diameter;s (LV Trace)",,"mm",3.451633,
+"EF",,"%",26.974587,
+"EF (LV Trace)",,"%",44.253671,
+"FS",,"%",12.418296,
+"FS (LV Trace)",,"%",21.833743,
+"LV Mass AW",,"mg",97.581521,
+"LV Mass AW (Corrected)",,"mg",78.065217,
+"LV Vol;d",,"uL",85.481080,
+"LV Vol;s",,"uL",62.422912,
+"SV (LV Trace)",,"uL",38.698721,
+"V;d (LV Trace)",,"uL",88.576756,
+"V;s (LV Trace)",,"uL",49.878035,
+
+
+
+"Series Name","Series 11"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","3:52:14 PM"
+"Animal ID","111"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","21.6"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","619.181277","17.242017","639.090643","609.226594","609.226594",
+"MV E","PW Doppler Mode","Velocity","mm/s","1042.255301","44.796073","1042.255301","1087.051374","997.459228",
+
+Calculation,,Units,
+"MV E/A",,"none",1.683280,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","523.591645","15.877795","512.364348","534.818942",
+"LV Trace","M-Mode","Diameter;s","mm","3.069774","0.329861","2.836527","3.303021",
+"LV Trace","M-Mode","Diameter;d","mm","4.320213","0.182421","4.191222","4.449205",
+"LV Trace","M-Mode","Volume;s","uL","37.488642","9.535460","30.746053","44.231230",
+"LV Trace","M-Mode","Volume;d","uL","84.337402","8.057862","78.639634","90.035171",
+"LV Trace","M-Mode","Stroke Volume","uL","46.848761","1.477598","47.893580","45.803941",
+"LV Trace","M-Mode","Ejection Fraction","%","55.887993","7.091723","60.902598","50.873387",
+"LV Trace","M-Mode","Fractional Shortening","%","29.041876","4.639084","32.322204","25.761548",
+"LV Trace","M-Mode","Cardiac Output","mL/min","24.517889","2.980303E-02","24.538963","24.496815",
+"LVAW;d","M-Mode","Depth","mm","0.806034","9.387452E-02","0.872414","0.739655",
+"LVAW;s","M-Mode","Depth","mm","1.194828","0.214570","1.346552","1.043103",
+"LVID;d","M-Mode","Depth","mm","4.494828","0.000000","4.494828","4.494828",
+"LVID;s","M-Mode","Depth","mm","3.043966","0.254802","2.863793","3.224138",
+"LVPW;d","M-Mode","Depth","mm","0.616379","0.174338","0.739655","0.493103",
+"LVPW;s","M-Mode","Depth","mm","1.062069","0.268213","1.251724","0.872414",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",24.517889,
+"Diameter;d (LV Trace)",,"mm",4.320213,
+"Diameter;s (LV Trace)",,"mm",3.069774,
+"EF",,"%",60.664181,
+"EF (LV Trace)",,"%",55.887993,
+"FS",,"%",32.278477,
+"FS (LV Trace)",,"%",29.041876,
+"LV Mass AW",,"mg",122.541382,
+"LV Mass AW (Corrected)",,"mg",98.033106,
+"LV Vol;d",,"uL",92.196373,
+"LV Vol;s",,"uL",36.266198,
+"SV (LV Trace)",,"uL",46.848761,
+"V;d (LV Trace)",,"uL",84.337402,
+"V;s (LV Trace)",,"uL",37.488642,
+
+
+
+"Series Name","Series 4"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","2:15:36 PM"
+"Animal ID","109"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","28.2"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","707.778140","74.660141","782.438281","633.117999","707.778140",
+"MV E","PW Doppler Mode","Velocity","mm/s","1225.421787","60.347074","1170.671016","1215.467101","1290.127242",
+
+Calculation,,Units,
+"MV E/A",,"none",1.731364,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","460.729302","1.667751","461.908581","459.550024",
+"LV Trace","M-Mode","Diameter;s","mm","5.199658","6.522909E-02","5.153534","5.245782",
+"LV Trace","M-Mode","Diameter;d","mm","5.860287","6.843978E-02","5.811893","5.908681",
+"LV Trace","M-Mode","Volume;s","uL","129.532986","3.793371","126.850667","132.215304",
+"LV Trace","M-Mode","Volume;d","uL","170.582491","4.578087","167.345294","173.819687",
+"LV Trace","M-Mode","Stroke Volume","uL","41.049505","0.784716","40.494627","41.604383",
+"LV Trace","M-Mode","Ejection Fraction","%","24.066808","0.185883","24.198246","23.935369",
+"LV Trace","M-Mode","Fractional Shortening","%","11.273424","7.687026E-02","11.327779","11.219068",
+"LV Trace","M-Mode","Cardiac Output","mL/min","18.912055","0.293081","18.704816","19.119295",
+"LVAW;d","M-Mode","Depth","mm","0.720690","5.364258E-02","0.682759","0.758621",
+"LVAW;s","M-Mode","Depth","mm","1.109483","0.040232","1.137931","1.081034",
+"LVID;d","M-Mode","Depth","mm","5.831897","1.341065E-02","5.841379","5.822414",
+"LVID;s","M-Mode","Depth","mm","5.120690","2.682129E-02","5.101724","5.139655",
+"LVPW;d","M-Mode","Depth","mm","0.531034","2.682129E-02","0.512069","0.550000",
+"LVPW;s","M-Mode","Depth","mm","0.787069","4.023194E-02","0.758621","0.815517",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",18.912055,
+"Diameter;d (LV Trace)",,"mm",5.860287,
+"Diameter;s (LV Trace)",,"mm",5.199658,
+"EF",,"%",25.903421,
+"EF (LV Trace)",,"%",24.066808,
+"FS",,"%",12.195123,
+"FS (LV Trace)",,"%",11.273424,
+"LV Mass AW",,"mg",165.416752,
+"LV Mass AW (Corrected)",,"mg",132.333402,
+"LV Vol;d",,"uL",168.666040,
+"LV Vol;s",,"uL",124.975766,
+"SV (LV Trace)",,"uL",41.049505,
+"V;d (LV Trace)",,"uL",170.582491,
+"V;s (LV Trace)",,"uL",129.532986,
+
+
+
+"Series Name","Series 7"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","3:00:20 PM"
+"Animal ID","94"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","22.8"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","390.223850","52.439584","340.450399","444.974645","385.246505",
+"MV E","PW Doppler Mode","Velocity","mm/s","728.683311","39.506451","698.819241","713.751276","773.479416",
+
+Calculation,,Units,
+"MV E/A",,"none",1.867347,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","540.647344","97.771052","609.781918","471.512770",
+"LV Trace","M-Mode","Diameter;s","mm","5.006087","1.147825E-02","5.014203","4.997970",
+"LV Trace","M-Mode","Diameter;d","mm","6.034613","7.936384E-02","5.978494","6.090732",
+"LV Trace","M-Mode","Volume;s","uL","118.593672","0.644385","119.049320","118.138023",
+"LV Trace","M-Mode","Volume;d","uL","182.443846","5.525844","178.536484","186.351208",
+"LV Trace","M-Mode","Stroke Volume","uL","63.850174","6.170229","59.487164","68.213185",
+"LV Trace","M-Mode","Ejection Fraction","%","34.961985","2.323062","33.319332","36.604638",
+"LV Trace","M-Mode","Fractional Shortening","%","17.035361","1.281311","16.129338","17.941385",
+"LV Trace","M-Mode","Cardiac Output","mL/min","34.216160","2.910504","36.274197","32.158123",
+"LVAW;d","M-Mode","Depth","mm","0.673276","4.023194E-02","0.701724","0.644828",
+"LVAW;s","M-Mode","Depth","mm","1.062069","0.134106","1.156897","0.967241",
+"LVID;d","M-Mode","Depth","mm","5.879310","2.682129E-02","5.860345","5.898276",
+"LVID;s","M-Mode","Depth","mm","4.978448","1.341065E-02","4.987931","4.968966",
+"LVPW;d","M-Mode","Depth","mm","0.407759","1.341065E-02","0.417241","0.398276",
+"LVPW;s","M-Mode","Depth","mm","0.445690","4.023194E-02","0.417241","0.474138",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",34.216160,
+"Diameter;d (LV Trace)",,"mm",6.034613,
+"Diameter;s (LV Trace)",,"mm",5.006087,
+"EF",,"%",31.871007,
+"EF (LV Trace)",,"%",34.961985,
+"FS",,"%",15.322580,
+"FS (LV Trace)",,"%",17.035361,
+"LV Mass AW",,"mg",141.078586,
+"LV Mass AW (Corrected)",,"mg",112.862869,
+"LV Vol;d",,"uL",171.823664,
+"LV Vol;s",,"uL",117.061732,
+"SV (LV Trace)",,"uL",63.850174,
+"V;d (LV Trace)",,"uL",182.443846,
+"V;s (LV Trace)",,"uL",118.593672,
+
+
+
+"Series Name","Series 5"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","2:32:55 PM"
+"Animal ID","106"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","23"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Instance 1"
+"MV A","PW Doppler Mode","Velocity","mm/s","2475.730933",
+"MV E","PW Doppler Mode","Velocity","mm/s","3356.720830",
+
+Calculation,,Units,
+"MV E/A",,"none",1.355850,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","524.374843","8.640268","530.484435","518.265251",
+"LV Trace","M-Mode","Diameter;s","mm","4.318626","0.179549","4.191665","4.445586",
+"LV Trace","M-Mode","Diameter;d","mm","5.148495","0.362182","4.892393","5.404596",
+"LV Trace","M-Mode","Volume;s","uL","84.033139","8.220080","78.220665","89.845613",
+"LV Trace","M-Mode","Volume;d","uL","127.062274","20.664693","112.450130","141.674419",
+"LV Trace","M-Mode","Stroke Volume","uL","43.029135","12.444614","34.229465","51.828806",
+"LV Trace","M-Mode","Ejection Fraction","%","33.511361","4.344007","30.439684","36.583038",
+"LV Trace","M-Mode","Fractional Shortening","%","16.033576","2.419384","14.322813","17.744339",
+"LV Trace","M-Mode","Cardiac Output","mL/min","22.509634","6.153859","18.158198","26.861069",
+"LVAW;d","M-Mode","Depth","mm","0.682759","8.046388E-02","0.625862","0.739655",
+"LVAW;s","M-Mode","Depth","mm","0.843966","4.023194E-02","0.815517","0.872414",
+"LVID;d","M-Mode","Depth","mm","5.177586","0.429141","4.874138","5.481034",
+"LVID;s","M-Mode","Depth","mm","4.352586","0.174338","4.229310","4.475862",
+"LVPW;d","M-Mode","Depth","mm","0.550000","0.134106","0.644828","0.455172",
+"LVPW;s","M-Mode","Depth","mm","0.758621","0.268213","0.948276","0.568966",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",22.509634,
+"Diameter;d (LV Trace)",,"mm",5.148495,
+"Diameter;s (LV Trace)",,"mm",4.318626,
+"EF",,"%",33.331471,
+"EF (LV Trace)",,"%",33.511361,
+"FS",,"%",15.934067,
+"FS (LV Trace)",,"%",16.033576,
+"LV Mass AW",,"mg",131.224488,
+"LV Mass AW (Corrected)",,"mg",104.979590,
+"LV Vol;d",,"uL",128.218039,
+"LV Vol;s",,"uL",85.481080,
+"SV (LV Trace)",,"uL",43.029135,
+"V;d (LV Trace)",,"uL",127.062274,
+"V;s (LV Trace)",,"uL",84.033139,
+
+
+
+"Series Name","Series 10"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","3:39:56 PM"
+"Animal ID","112"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","22.4"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","513.661772","39.506433","483.797716","498.729744","558.457857",
+"MV E","PW Doppler Mode","Velocity","mm/s","1130.852274","95.999511","1200.535073","1170.671016","1021.350734",
+
+Calculation,,Units,
+"MV E/A",,"none",2.201550,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","418.766300","15.403701","407.874239","429.658362",
+"LV Trace","M-Mode","Diameter;s","mm","4.244312","4.816474E-02","4.278370","4.210255",
+"LV Trace","M-Mode","Diameter;d","mm","5.127509","3.606031E-02","5.102011","5.153008",
+"LV Trace","M-Mode","Volume;s","uL","80.566830","2.161014","82.094898","79.038762",
+"LV Trace","M-Mode","Volume;d","uL","125.398206","2.004378","123.980896","126.815515",
+"LV Trace","M-Mode","Stroke Volume","uL","44.831376","4.165392","41.885998","47.776753",
+"LV Trace","M-Mode","Ejection Fraction","%","35.729227","2.750632","33.784236","37.674218",
+"LV Trace","M-Mode","Fractional Shortening","%","17.219330","1.521513","16.143458","18.295202",
+"LV Trace","M-Mode","Cardiac Output","mL/min","18.810154","2.420292","17.098749","20.521558",
+"LVAW;d","M-Mode","Depth","mm","0.512069","0.026821","0.531034","0.493103",
+"LVAW;s","M-Mode","Depth","mm","0.673276","0.120696","0.758621","0.587931",
+"LVID;d","M-Mode","Depth","mm","5.073276","6.705323E-02","5.025862","5.120690",
+"LVID;s","M-Mode","Depth","mm","4.219828","6.705323E-02","4.267241","4.172414",
+"LVPW;d","M-Mode","Depth","mm","0.559483","0.174338","0.682759","0.436207",
+"LVPW;s","M-Mode","Depth","mm","0.900862","6.705323E-02","0.948276","0.853448",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",18.810154,
+"Diameter;d (LV Trace)",,"mm",5.127509,
+"Diameter;s (LV Trace)",,"mm",4.244312,
+"EF",,"%",35.034453,
+"EF (LV Trace)",,"%",35.729227,
+"FS",,"%",16.822424,
+"FS (LV Trace)",,"%",17.219330,
+"LV Mass AW",,"mg",106.821986,
+"LV Mass AW (Corrected)",,"mg",85.457589,
+"LV Vol;d",,"uL",122.307331,
+"LV Vol;s",,"uL",79.457626,
+"SV (LV Trace)",,"uL",44.831376,
+"V;d (LV Trace)",,"uL",125.398206,
+"V;s (LV Trace)",,"uL",80.566830,
+
+
+
+"Series Name","Series 9"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","3:27:58 PM"
+"Animal ID","119"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","20.6"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","331.938770","28.920262","298.544527","348.635891","348.635891",
+"MV E","PW Doppler Mode","Velocity","mm/s","912.998588","32.204241","899.640891","949.732255","889.622618",
+
+Calculation,,Units,
+"MV E/A",,"none",2.750503,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","500.720833","8.309173","494.845361","506.596306",
+"LV Trace","M-Mode","Diameter;s","mm","2.706429","6.165801E-04","2.706865","2.705993",
+"LV Trace","M-Mode","Diameter;d","mm","3.850409","8.847686E-03","3.856665","3.844152",
+"LV Trace","M-Mode","Volume;s","uL","27.193021","3.497653E-02","27.217753","27.168289",
+"LV Trace","M-Mode","Volume;d","uL","63.957860","0.384990","64.230089","63.685631",
+"LV Trace","M-Mode","Stroke Volume","uL","36.764839","0.350014","37.012336","36.517342",
+"LV Trace","M-Mode","Ejection Fraction","%","57.482304","0.201246","57.624606","57.340002",
+"LV Trace","M-Mode","Fractional Shortening","%","29.710422","0.145502","29.813308","29.607537",
+"LV Trace","M-Mode","Cardiac Output","mL/min","18.407467","0.130226","18.315383","18.499551",
+"LVAW;d","M-Mode","Depth","mm","0.711207","4.023194E-02","0.739655","0.682759",
+"LVAW;s","M-Mode","Depth","mm","1.100000","0.000000","1.100000","1.100000",
+"LVID;d","M-Mode","Depth","mm","3.859483","6.705323E-02","3.906897","3.812069",
+"LVID;s","M-Mode","Depth","mm","2.806897","5.364258E-02","2.844828","2.768966",
+"LVPW;d","M-Mode","Depth","mm","0.616379","1.341065E-02","0.606897","0.625862",
+"LVPW;s","M-Mode","Depth","mm","0.891379","0.000000","0.891379","0.891379",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",18.407467,
+"Diameter;d (LV Trace)",,"mm",3.850409,
+"Diameter;s (LV Trace)",,"mm",2.706429,
+"EF",,"%",53.756413,
+"EF (LV Trace)",,"%",57.482304,
+"FS",,"%",27.272720,
+"FS (LV Trace)",,"%",29.710422,
+"LV Mass AW",,"mg",86.422125,
+"LV Mass AW (Corrected)",,"mg",69.137700,
+"LV Vol;d",,"uL",64.290525,
+"LV Vol;s",,"uL",29.730245,
+"SV (LV Trace)",,"uL",36.764839,
+"V;d (LV Trace)",,"uL",63.957860,
+"V;s (LV Trace)",,"uL",27.193021,
+
+
+
+"Series Name","Series 13"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","4:14:59 PM"
+"Animal ID","113"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","22.7"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","476.098961","60.173859","521.586123","407.868218","498.842542",
+"MV E","PW Doppler Mode","Velocity","mm/s","898.118741","19.078919","900.645805","877.902224","915.808193",
+
+Calculation,,Units,
+"MV E/A",,"none",1.886412,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","521.840518","2.674376","523.731588","519.949449",
+"LV Trace","M-Mode","Diameter;s","mm","3.944274","2.483636E-02","3.961836","3.926713",
+"LV Trace","M-Mode","Diameter;d","mm","4.785752","0.039086","4.758114","4.813390",
+"LV Trace","M-Mode","Volume;s","uL","67.724683","0.996208","68.429109","67.020258",
+"LV Trace","M-Mode","Volume;d","uL","106.786355","2.029483","105.351294","108.221417",
+"LV Trace","M-Mode","Stroke Volume","uL","39.061672","3.025691","36.922185","41.201159",
+"LV Trace","M-Mode","Ejection Fraction","%","36.558950","2.138600","35.046732","38.071169",
+"LV Trace","M-Mode","Fractional Shortening","%","17.578109","1.192125","16.735149","18.421069",
+"LV Trace","M-Mode","Cardiac Output","mL/min","20.379917","1.474463","19.337315","21.422520",
+"LVAW;d","M-Mode","Depth","mm","0.834483","5.364258E-02","0.872414","0.796552",
+"LVAW;s","M-Mode","Depth","mm","1.118966","0.000000","1.118966","1.118966",
+"LVID;d","M-Mode","Depth","mm","4.807759","9.387452E-02","4.741379","4.874138",
+"LVID;s","M-Mode","Depth","mm","3.963793","8.046388E-02","3.906897","4.020690",
+"LVPW;d","M-Mode","Depth","mm","0.331897","1.341065E-02","0.322414","0.341379",
+"LVPW;s","M-Mode","Depth","mm","0.483621","1.341065E-02","0.474138","0.493103",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",20.379917,
+"Diameter;d (LV Trace)",,"mm",4.785752,
+"Diameter;s (LV Trace)",,"mm",3.944274,
+"EF",,"%",36.526997,
+"EF (LV Trace)",,"%",36.558950,
+"FS",,"%",17.554249,
+"FS (LV Trace)",,"%",17.578109,
+"LV Mass AW",,"mg",107.500626,
+"LV Mass AW (Corrected)",,"mg",86.000501,
+"LV Vol;d",,"uL",107.925943,
+"LV Vol;s",,"uL",68.503837,
+"SV (LV Trace)",,"uL",39.061672,
+"V;d (LV Trace)",,"uL",106.786355,
+"V;s (LV Trace)",,"uL",67.724683,
+
+
+
+"Series Name","Series 1"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","1:33:15 PM"
+"Animal ID","98"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","25"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","609.226826","90.827993","549.498706","564.430736","713.751036",
+"MV E","PW Doppler Mode","Velocity","mm/s","1007.414294","22.809053","1027.323667","982.527577","1012.391637",
+
+Calculation,,Units,
+"MV E/A",,"none",1.653595,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","440.982821","54.161915","479.281078","402.684564",
+"LV Trace","M-Mode","Diameter;s","mm","4.593707","0.147163","4.489647","4.697768",
+"LV Trace","M-Mode","Diameter;d","mm","5.461176","0.139860","5.362280","5.560072",
+"LV Trace","M-Mode","Volume;s","uL","97.107405","7.280257","91.959486","102.255324",
+"LV Trace","M-Mode","Volume;d","uL","145.166778","8.485602","139.166552","151.167005",
+"LV Trace","M-Mode","Stroke Volume","uL","48.059373","1.205345","47.207066","48.911681",
+"LV Trace","M-Mode","Ejection Fraction","%","33.138664","1.106775","33.921273","32.356056",
+"LV Trace","M-Mode","Fractional Shortening","%","15.891206","0.540708","16.273544","15.508868",
+"LV Trace","M-Mode","Cardiac Output","mL/min","21.160716","2.071451","22.625453","19.695979",
+"LVAW;d","M-Mode","Depth","mm","0.540517","6.705323E-02","0.493103","0.587931",
+"LVAW;s","M-Mode","Depth","mm","0.948276","0.000000","0.948276",,
+"LVID;d","M-Mode","Depth","mm","5.300862","0.281624","5.101724","5.500000",
+"LVID;s","M-Mode","Depth","mm","4.817241","0.000000","4.817241",,
+"LVPW;d","M-Mode","Depth","mm","0.682759","0.134106","0.587931","0.777586",
+"LVPW;s","M-Mode","Depth","mm","0.891379","0.000000","0.891379",,
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",21.160716,
+"Diameter;d (LV Trace)",,"mm",5.461176,
+"Diameter;s (LV Trace)",,"mm",4.593707,
+"EF",,"%",19.920056,
+"EF (LV Trace)",,"%",33.138664,
+"FS",,"%",9.123441,
+"FS (LV Trace)",,"%",15.891206,
+"LV Mass AW",,"mg",135.569764,
+"LV Mass AW (Corrected)",,"mg",108.455811,
+"LV Vol;d",,"uL",135.393618,
+"LV Vol;s",,"uL",108.423133,
+"SV (LV Trace)",,"uL",48.059373,
+"V;d (LV Trace)",,"uL",145.166778,
+"V;s (LV Trace)",,"uL",97.107405,
+
+
+
+"Series Name","Series 2"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","1:46:10 PM"
+"Animal ID","99"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","26.8"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","335.472942","8.621012","340.450285","325.518255","340.450285",
+"MV E","PW Doppler Mode","Velocity","mm/s","454.929182","8.621012","459.906526","459.906526","444.974496",
+
+Calculation,,Units,
+"MV E/A",,"none",1.356083,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","501.026373","5.115277","497.409326","504.643420",
+"LV Trace","M-Mode","Diameter;s","mm","5.702680","5.174315E-02","5.666092","5.739268",
+"LV Trace","M-Mode","Diameter;d","mm","6.581789","0.075554","6.528364","6.635214",
+"LV Trace","M-Mode","Volume;s","uL","160.232741","3.348525","157.864977","162.600506",
+"LV Trace","M-Mode","Volume;d","uL","222.252449","5.808516","218.145208","226.359690",
+"LV Trace","M-Mode","Stroke Volume","uL","62.019708","2.459991","60.280231","63.759184",
+"LV Trace","M-Mode","Ejection Fraction","%","27.900137","0.377682","27.633076","28.167199",
+"LV Trace","M-Mode","Fractional Shortening","%","13.355501","0.208462","13.208096","13.502906",
+"LV Trace","M-Mode","Cardiac Output","mL/min","31.079801","1.549768","29.983949","32.175653",
+"LVAW;d","M-Mode","Depth","mm","0.711207","1.341065E-02","0.701724","0.720690",
+"LVAW;s","M-Mode","Depth","mm","0.910345","5.364258E-02","0.948276","0.872414",
+"LVID;d","M-Mode","Depth","mm","6.505172","8.046388E-02","6.448276","6.562069",
+"LVID;s","M-Mode","Depth","mm","5.775000","0.201160","5.632759","5.917241",
+"LVPW;d","M-Mode","Depth","mm","0.474138","5.364258E-02","0.436207","0.512069",
+"LVPW;s","M-Mode","Depth","mm","0.654310","9.387452E-02","0.587931","0.720690",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",31.079801,
+"Diameter;d (LV Trace)",,"mm",6.581789,
+"Diameter;s (LV Trace)",,"mm",5.702680,
+"EF",,"%",23.786103,
+"EF (LV Trace)",,"%",27.900137,
+"FS",,"%",11.224484,
+"FS (LV Trace)",,"%",13.355501,
+"LV Mass AW",,"mg",189.084327,
+"LV Mass AW (Corrected)",,"mg",151.267462,
+"LV Vol;d",,"uL",216.387455,
+"LV Vol;s",,"uL",164.917311,
+"SV (LV Trace)",,"uL",62.019708,
+"V;d (LV Trace)",,"uL",222.252449,
+"V;s (LV Trace)",,"uL",160.232741,
+
+
+
+"Series Name","Series 12"
+"Acquired By","Satadru Lahiri"
+"Series Date","12/4/2020"
+"Series Time","4:04:10 PM"
+"Animal ID","118"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight","19.3"
+"Type",""
+"Date of birth",""
+"Temperature",""
+"Heart rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","MV Flow"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2","Instance 3"
+"MV A","PW Doppler Mode","Velocity","mm/s","1719.173042","104.879050","1609.671574","1729.127721","1818.719831",
+"MV E","PW Doppler Mode","Velocity","mm/s","2639.980838","39.506407","2654.912856","2595.184783","2669.844875",
+
+Calculation,,Units,
+"MV E/A",,"none",1.535611,
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LV Trace","M-Mode","Heart Rate","BPM","476.786212","6.473779","481.363864","472.208559",
+"LV Trace","M-Mode","Diameter;s","mm","4.009035","0.496102","3.658238","4.359832",
+"LV Trace","M-Mode","Diameter;d","mm","4.986986","0.153823","4.878217","5.095756",
+"LV Trace","M-Mode","Volume;s","uL","71.230620","20.733965","56.569493","85.891748",
+"LV Trace","M-Mode","Volume;d","uL","117.614119","8.428809","111.654051","123.574186",
+"LV Trace","M-Mode","Stroke Volume","uL","46.383498","12.305156","55.084558","37.682439",
+"LV Trace","M-Mode","Ejection Fraction","%","39.914404","13.322776","49.335029","30.493779",
+"LV Trace","M-Mode","Fractional Shortening","%","19.725302","7.471857","25.008703","14.441902",
+"LV Trace","M-Mode","Cardiac Output","mL/min","22.138825","6.189858","26.515716","17.761935",
+"LVAW;d","M-Mode","Depth","mm","0.550000","0.134106","0.644828","0.455172",
+"LVAW;s","M-Mode","Depth","mm","0.919828","0.335266","1.156897","0.682759",
+"LVID;d","M-Mode","Depth","mm","4.940517","0.120696","4.855172","5.025862",
+"LVID;s","M-Mode","Depth","mm","3.963793","0.348677","3.717241","4.210345",
+"LVPW;d","M-Mode","Depth","mm","0.663793","0.214570","0.512069","0.815517",
+"LVPW;s","M-Mode","Depth","mm","0.938793","0.174338","0.815517","1.062069",
+
+Calculation,,Units,
+"CO (LV Trace)",,"mL/min",22.138825,
+"Diameter;d (LV Trace)",,"mm",4.986986,
+"Diameter;s (LV Trace)",,"mm",4.009035,
+"EF",,"%",40.430176,
+"EF (LV Trace)",,"%",39.914404,
+"FS",,"%",19.769672,
+"FS (LV Trace)",,"%",19.725302,
+"LV Mass AW",,"mg",118.468949,
+"LV Mass AW (Corrected)",,"mg",94.775159,
+"LV Vol;d",,"uL",114.997549,
+"LV Vol;s",,"uL",68.503837,
+"SV (LV Trace)",,"uL",46.383498,
+"V;d (LV Trace)",,"uL",117.614119,
+"V;s (LV Trace)",,"uL",71.230620,
+
+
+
