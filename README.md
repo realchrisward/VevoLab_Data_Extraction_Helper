@@ -14,11 +14,13 @@ Setting things up
 ....................
 
 ***PC and MAC versions (Precompiled)***
+
 (not yet available)
 * Extract the zipped folder into a convenient location on your computer
 * To run the program Click on the "VevoLab Data Extraction Helper.exe" shortcut (or you can use the .exe file located in the "VevoLab Data * Extraction Helper" subfolder)
 
 ***Running from source code***
+
 *open the VevoLab_Data_Extraction_Helper.py file using the python interpreter (note your environment will require the standard python libraries (tkinter, re, itertools, traceback) as well as additional libraries (pandas, numpy, scipy, pingouin)
 
 ....................
