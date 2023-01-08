@@ -138,19 +138,22 @@ def scan_for_column_names(report_paths):
 @dataclass
 class vdeh_model:
     # logging queue:
-    logger: None
+    logger: None = None
 
     # paths
-    input_paths: list()
-    output_path: str()
-    settings_path: str()
+    input_paths: list = None
+    output_path: str = str()
+    settings_path: str = str()
 
     # settings
-    animal_data: pandas.DataFrame()
-    timepoint_data: pandas.DataFrame()
-    derived_data: pandas.DataFrame()
-    column_names: pandas.DataFrame()
-    model: pandas.DataFrame()
+    animal_data: pandas.DataFrame = pandas.DataFrame()
+    timepoint_data: pandas.DataFrame = pandas.DataFrame()
+    derived_data: pandas.DataFrame = pandas.DataFrame()
+    column_names: pandas.DataFrame = pandas.DataFrame()
+    model: pandas.DataFrame = pandas.DataFrame()
+    
+    settings_changed: bool = False
+    version_info: str = str()
 
     def load_logger(self, logger):
         self.logger = logger
@@ -191,7 +194,7 @@ class vdeh_model:
                 self.logger.warning(
                     "No Column Names Found - default columns will be used"
                 )
-            self.column_names = scan_for_column_names(self.input_path)
+            self.column_names = scan_for_column_names(self.input_paths)
 
         try:
             self.derived_data = pandas.read_excel(
@@ -226,7 +229,7 @@ class vdeh_model:
         self.column_names = scan_for_column_names(self.input_path)
 
     def generate_full_report(self):
-        #%% grab column name settings
+        # grab column name settings
         try:
             ColumnStyles = dict(
                 zip(
@@ -385,7 +388,7 @@ class vdeh_model:
             if self.logger:
                 self.logger.error(traceback.format_exc())
 
-        #%% perform derived data calculations if selected
+        # perform derived data calculations if selected
         # calculate ages
         if self.derived_data.shape[0] > 0:
             try:
@@ -522,7 +525,7 @@ class vdeh_model:
             if self.logger:
                 self.logger.error(traceback.format_exc())
 
-        #%% prepare summary ouputs
+        # prepare summary ouputs
 
         try:
             if all(

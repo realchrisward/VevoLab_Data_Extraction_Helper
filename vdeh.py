@@ -85,12 +85,35 @@ SOFTWARE.
 """
 
 #%% import modules/libraries
-
+import gui
+import gui.vdeh_controller as vdeh_controller
+import gui.vdeh_model as vdeh_model
+import gui.vdeh_subgui_controller as vdeh_subgui_controller
+import sys
+from PyQt5 import QtWidgets
 
 #%% define functions/classes
 
 
 #%% define main
+def main():
+    app = QtWidgets.QApplication(sys.argv)
+    
+    MainWindow = QtWidgets.QMainWindow()
+    
+    ui = vdeh_controller.vdeh_main_window(MainWindow,vdeh_model.vdeh_model)
+    ui.model.version_info = {
+        'VevoLab Data Extraction Helper':__version__,
+        'vdeh model':vdeh_model.__component_version__,
+        'vdeh gui':vdeh_controller.__component_version__,
+        'vdeh subguis':vdeh_subgui_controller.__component_version__
+        }
+    
+    MainWindow.show()
+    
+    sys.exit(app.exec_())
 
-
+    
 #%% run main
+if __name__ == "__main__":
+    main()
