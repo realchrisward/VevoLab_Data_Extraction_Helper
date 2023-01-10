@@ -25,7 +25,7 @@ import traceback
 #%% define functions
 
 
-def scan_for_column_names(report_paths):
+def collect_data(report_paths, logger=None):
     """
     Parameters
     ----------
@@ -45,31 +45,45 @@ def scan_for_column_names(report_paths):
     column_names = {}
     column_names["MetaData Fields"] = []
     column_names["VevoLab Measurement_Mode_Parameter or Calculation"] = []
+    df = pandas.DataFrame()
+
     # iterate through files
     for f in report_paths:
         # open files
+        if logger:
+            logger.log("info", f"collecting data from {f}")
         with open(f, "r") as opfi:
             report_text = opfi.read().replace('"', "")
-
+            report_dict = {}
+            study_dict = {}
             # iterate through series (split using 'Series Name' - first row
             # will contain text attributable to Series Name)
-            for b in report_text.split("Series Name,"):
+            for i, b in enumerate(report_text.split("Series Name,")):
+
                 # iterate through sections
                 rows = []
                 rows = b.split("\n")
 
                 # iterate through rows
+
                 FLAG_calculations = 0
                 FLAG_measurements = 0
+                FLAG_version = 0
 
-                for r in rows:
+                # prepare the report dict
+                report_dict[rows[0]] = {"Series Name":rows[0]}
+                for r in rows[1:]:
                     columns = []
                     columns = r.split(",")
 
-                    # clear flags indicatig calculation or measurement section
+                    # populate report_dict, key will be the series name
+                    # 1st block will be study info metadata
+
+                    # clear flags indicating calculation or measurement section
                     if columns[0] == "":
                         FLAG_calculations = 0
                         FLAG_measurements = 0
+                        FLAG_version = 0
                         continue
 
                     # check and set flags for whether the line indicates
@@ -78,18 +92,55 @@ def scan_for_column_names(report_paths):
                     elif columns[0] == "Calculation":
                         FLAG_calculations = 1
                         FLAG_measurements = 0
+                        FLAG_version = 0
                         continue
 
                     elif columns[0] == "Measurement":
                         FLAG_measurements = 1
                         FLAG_calculations = 0
+                        FLAG_version = 0
                         continue
 
-                    if FLAG_calculations == 1:
+                    elif columns[0] == "Version Information":
+                        FLAG_version = 1
+                        FLAG_calculations = 0
+                        FLAG_measurements = 0
+                        continue
+
+                    # if row is not a transition indicator, extract data if
+                    # row is calculation or measurement data (add to list)
+                    if (
+                        FLAG_calculations == 0
+                        and FLAG_measurements == 0
+                        and FLAG_version == 0
+                    ):
+                        column_names["MetaData Fields"].append(columns[0])
+                        # try:
+                        report_dict[rows[0]][columns[0]] = columns[1]
+                        # except IndexError: # no 2nd column
+                            # report_dict[rows[0]][columns[0]] = '###'
+                        if i == 0:
+                            # try:
+                                study_dict[columns[0]] = columns[1]
+                            # except IndexError: # no 2nd column
+                                # study_dict[columns[0]] = '###'
+
+                    elif FLAG_version > 0:
+                        if FLAG_version == 1:
+                            version_header = [c for c in columns]
+
+                        else:
+                            study_dict[','.join(version_header)] = \
+                                ','.join(columns)
+                        FLAG_version += 1
+
+                    elif FLAG_calculations == 1:
                         column_names[
                             "VevoLab Measurement_Mode_Parameter or Calculation"
                         ].append(columns[0])
-                    if FLAG_measurements == 1:
+                        report_dict[rows[0]][columns[0]] = columns[3]
+
+                    elif FLAG_measurements == 1:
                         # screen for cases of measurements with number suffix
                         if columns[0][-1].isdigit():
                             # if measurement is number suffixed, grab the
@@ -100,36 +151,54 @@ def scan_for_column_names(report_paths):
                         column_names[
                             "VevoLab Measurement_Mode_Parameter or Calculation"
                         ].append("_".join(columns[0:3]))
-                    if FLAG_calculations == 0 and FLAG_measurements == 0:
-                        column_names["MetaData Fields"].append(columns[0])
+                        # place the data
+                        if "_".join(columns[0:3]) in report_dict[rows[0]]:
+                            report_dict[rows[0]][
+                                "_".join(columns[0:3])
+                            ].append(columns[4])
+                        else:
+                            report_dict[rows[0]]["_".join(columns[0:3])] = [
+                                columns[4]
+                            ]
+                for k, v in study_dict.items():
+                    report_dict[rows[0]][k] = v
+
+        for first_key in report_dict:
+            for second_key in report_dict[first_key]:
+                if type(report_dict[first_key][second_key]) is list:
+                    data_list = []
+                    try:
+                        data_list = [
+                            float(i)
+                            for i in report_dict[first_key][second_key]
+                        ]
+                        report_dict[first_key][second_key] = sum(
+                            data_list
+                        ) / len(data_list)
+
+                    except Exception:
+                        logger.log(
+                            "error",
+                            (
+                                "issue summarizing collected data "
+                                + "{f}:{first_key} - {second_key}"
+                            ),
+                        )
+                        logger.log("error", traceback.format_exc())
+                        report_dict[first_key][second_key] = "ERROR_NA"
+
+        current_df = pandas.DataFrame.from_dict(
+            report_dict, orient="index"
+        )
+
+        df = pandas.concat([df,current_df],axis=0, join='outer')
 
     # clean up columns names to remove duplicates
     for key in column_names:
         column_names[key] = list(set(column_names[key]))
 
-    return column_names
+    return column_names, df
 
-
-# def create_metadata_template(report_paths, template_output_path, logger):
-#     column_names = scan_for_column_names(report_paths)
-
-#     template = column_names[
-#         "VevoLab Measurement_Mode_Parameter or Calculation"
-#     ]
-#     template.sort()
-#     template_df = pandas.DataFrame(
-#         {
-#             "VevoLab Measurement_Mode_Parameter or Calculation": template,
-#             "Output Name": template,
-#         }
-#     )
-#     template_writer = pandas.ExcelWriter(
-#         template_output_path, engine="xlsxwriter"
-#     )
-#     logger.info(f"Preparing Column Metadata File:\n{template_output_path}")
-#     template_df.to_excel(template_writer, "ColumnNames", index=False)
-#     template_writer.save()
-#     return template_output_path
 
 
 #%% define classes
@@ -150,10 +219,13 @@ class vdeh_model:
     timepoint_data: pandas.DataFrame = pandas.DataFrame()
     derived_data: pandas.DataFrame = pandas.DataFrame()
     column_names: pandas.DataFrame = pandas.DataFrame()
+    model_data: pandas.DataFrame = pandas.DataFrame()
     model: pandas.DataFrame = pandas.DataFrame()
-    
+
     settings_changed: bool = False
     version_info: str = str()
+    log_level: str = "INFO"
+    log_file_path: str = str()
 
     def load_logger(self, logger):
         self.logger = logger
@@ -167,7 +239,7 @@ class vdeh_model:
             )
         except Exception:
             if self.logger:
-                self.logger.info("No Animal Data Found")
+                self.logger.log("info", "No Animal Data Found")
 
         try:
             self.timepoint_data = pandas.read_excel(
@@ -175,7 +247,7 @@ class vdeh_model:
             )
         except Exception:
             if self.logger:
-                self.logger.info("No Timepoint Data Found")
+                self.logger.log("info", "No Timepoint Data Found")
 
         try:
             self.model = pandas.read_excel(
@@ -183,7 +255,7 @@ class vdeh_model:
             )
         except Exception:
             if self.logger:
-                self.logger.info("No Model Information Found")
+                self.logger.log("info", "No Model Information Found")
 
         try:
             self.column_names = pandas.read_excel(
@@ -191,10 +263,13 @@ class vdeh_model:
             )
         except Exception:
             if self.logger:
-                self.logger.warning(
-                    "No Column Names Found - default columns will be used"
+                self.logger.log(
+                    "warning",
+                    "No Column Names Found - default columns will be used",
                 )
-            self.column_names = scan_for_column_names(self.input_paths)
+            self.column_names,self.model_data = collect_data(
+                self.input_paths,self.logger
+            )
 
         try:
             self.derived_data = pandas.read_excel(
@@ -202,7 +277,7 @@ class vdeh_model:
             )
         except Exception:
             if self.logger:
-                self.logger.info("No Settings For Derived Data Found")
+                self.logger.log("info", "No Settings For Derived Data Found")
 
     def save_settings_to_file(self, new_settings_path):
         writer = pandas.ExcelWriter(
@@ -225,8 +300,10 @@ class vdeh_model:
 
         writer.save()
 
-    def check_column_names(self):
-        self.column_names = scan_for_column_names(self.input_path)
+    def check_data(self):
+        self.column_names,self.model_data = collect_data(
+            self.input_paths,self.logger
+        )
 
     def generate_full_report(self):
         # grab column name settings
@@ -245,7 +322,7 @@ class vdeh_model:
             Study_Name = ""
             for current_file in self.report_path:
                 if self.logger:
-                    self.logger.info(f"working on {current_file}")
+                    self.logger.log("info", f"working on {current_file}")
                 with open(current_file, "r") as opfi:
                     report_text = opfi.read().replace('"', "")
 
@@ -384,9 +461,9 @@ class vdeh_model:
 
         except Exception as e:
             if self.logger:
-                self.logger.error(f"ERROR: Unable to collect data: {e}")
+                self.logger.log("error", f"ERROR: Unable to collect data: {e}")
             if self.logger:
-                self.logger.error(traceback.format_exc())
+                self.logger.log("error", traceback.format_exc())
 
         # perform derived data calculations if selected
         # calculate ages
@@ -426,9 +503,11 @@ class vdeh_model:
                     ).astype(int)
             except Exception as e:
                 if self.logger:
-                    self.logger.error(f"Unable to calculate Age Data: {e}")
+                    self.logger.log(
+                        "error", f"Unable to calculate Age Data: {e}"
+                    )
                 if self.logger:
-                    self.logger.error(traceback.format_exc())
+                    self.logger.log("error", traceback.format_exc())
 
             # calculate days post treatment
             try:
@@ -466,11 +545,11 @@ class vdeh_model:
                     ).astype(int)
             except Exception as e:
                 if self.logger:
-                    self.logger.error(
-                        f"Unable to calculate PostTreatment time: {e}"
+                    self.logger.log(
+                        "error", f"Unable to calculate PostTreatment time: {e}"
                     )
                 if self.logger:
-                    self.logger.error(traceback.format_exc())
+                    self.logger.log("error", traceback.format_exc())
 
             # calculate days within study
             try:
@@ -508,11 +587,11 @@ class vdeh_model:
                     ).astype(int)
             except Exception as e:
                 if self.logger:
-                    self.logger.error(
-                        f"Unable to calculate Time In Study: {e}"
+                    self.logger.log(
+                        "error", f"Unable to calculate Time In Study: {e}"
                     )
                 if self.logger:
-                    self.logger.error(traceback.format_exc())
+                    self.logger.log("error", traceback.format_exc())
 
         try:
             if self.model.shape[0] > 0:
@@ -521,9 +600,9 @@ class vdeh_model:
                 )
         except Exception as e:
             if self.logger:
-                self.logger.error(f"Unable to parse data model: {e}")
+                self.logger.log("error", f"Unable to parse data model: {e}")
             if self.logger:
-                self.logger.error(traceback.format_exc())
+                self.logger.log("error", traceback.format_exc())
 
         # prepare summary ouputs
 
@@ -656,9 +735,11 @@ class vdeh_model:
                     primary_df.to_csv(self.output_path + ".csv", index=False)
             except Exception as e:
                 if self.logger:
-                    self.logger(f"Unable to produce KOMP stype summary: {e}")
+                    self.logger.log(
+                        "error", f"Unable to produce KOMP stype summary: {e}"
+                    )
                 if self.logger:
-                    self.logger.error(traceback.format_exc())
+                    self.logger.log("error", traceback.format_exc())
 
             primary_df.to_excel(writer, "vertical", index=False)
 
@@ -860,16 +941,16 @@ class vdeh_model:
                 pairwise_df.to_excel(writer, "pairwise", index=False)
         except Exception as e:
             if self.logger:
-                self.logger.error(f"unable to process data: {e}")
+                self.logger.log("error", f"unable to process data: {e}")
             if self.logger:
-                self.logger.error(traceback.format_exc())
+                self.logger.log("error", traceback.format_exc())
         try:
             writer.save()
             if self.logger:
-                self.logger.info(f"Output Saved - {self.output_path}")
+                self.logger.log("info", f"Output Saved - {self.output_path}")
 
         except Exception as e:
             if self.logger:
-                self.logger.error(f"Unable to save file: {e}")
+                self.logger.log("error", f"Unable to save file: {e}")
             if self.logger:
-                self.logger.error(traceback.format_exc())
+                self.logger.log("error", traceback.format_exc())

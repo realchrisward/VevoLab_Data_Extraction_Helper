@@ -15,7 +15,7 @@ generate easily read reports
 report_path : a list of the paths to all VevoLab files that contain data
     (GUI tool helps user to select these files)
 
-metadata_path  : path to the excel file (.xlsx) that contains metadata and
+metadata_path : path to the excel file (.xlsx) that contains metadata and
     settings - the file should contain at least 2 sheets ...
     ...[DerivedData,ColumnNames]...
     (GUI tool helps user to select this file)
@@ -85,11 +85,12 @@ SOFTWARE.
 """
 
 #%% import modules/libraries
-import gui
+# import gui
 import gui.vdeh_controller as vdeh_controller
 import gui.vdeh_model as vdeh_model
 import gui.vdeh_subgui_controller as vdeh_subgui_controller
 import sys
+import argparse
 from PyQt5 import QtWidgets
 
 #%% define functions/classes
@@ -97,23 +98,82 @@ from PyQt5 import QtWidgets
 
 #%% define main
 def main():
-    app = QtWidgets.QApplication(sys.argv)
-    
-    MainWindow = QtWidgets.QMainWindow()
-    
-    ui = vdeh_controller.vdeh_main_window(MainWindow,vdeh_model.vdeh_model)
-    ui.model.version_info = {
-        'VevoLab Data Extraction Helper':__version__,
-        'vdeh model':vdeh_model.__component_version__,
-        'vdeh gui':vdeh_controller.__component_version__,
-        'vdeh subguis':vdeh_subgui_controller.__component_version__
-        }
-    
-    MainWindow.show()
-    
-    sys.exit(app.exec_())
 
-    
+    # parse command line arguments if provided
+    parser = argparse.ArgumentParser(
+        description="VevoLab Data Extraction Helper"
+    )
+    parser.add_argument(
+        "-i",
+        "--input",
+        action="append",
+        help="path to VevoLab Report, may combine by declaring multiple times",
+    )
+    parser.add_argument("-s", "--settings", help="path to settings file")
+    parser.add_argument(
+        "-o",
+        "--output",
+        help=(
+            "path for output file, "
+            + "if no settings file provided then only extracted data is "
+            + "created alongside a template 'settings.xlsx'"
+        ),
+    )
+    parser.add_argument(
+        "-d", "--dev", help="enable developer mode, specify path for log file"
+    )
+    parser.add_argument(
+        "-l",
+        "--loglevel",
+        help=(
+            "adjust the logging level to use for the gui console "
+            + "[DEBUG,INFO,WARNING,ERROR,...] default is INFO"
+        ),
+    )
+    parser.add_argument(
+        "-x",
+        "--express",
+        action="store_true",
+        help=(
+            "run in express mode, "
+            + "use command line arguments and run extraction/analysis "
+            + "without launching gui"
+        ),
+    )
+
+    args, others = parser.parse_known_args()
+
+    if args.express:
+        pass
+    else:
+        # create the application
+
+        app = QtWidgets.QApplication(sys.argv)
+
+        MainWindow = QtWidgets.QMainWindow()
+
+        ui = vdeh_controller.vdeh_main_window(
+            MainWindow, vdeh_model.vdeh_model
+        )
+        ui.model.version_info = {
+            "VevoLab Data Extraction Helper": __version__,
+            "vdeh model": vdeh_model.__component_version__,
+            "vdeh gui": vdeh_controller.__component_version__,
+            "vdeh subguis": vdeh_subgui_controller.__component_version__,
+        }
+
+        # if user specified --dev or --loglevel update model
+        if args.dev:
+            ui.model.log_file_path = args.dev
+        if args.loglevel:
+            ui.model.log_level = args.loglevel
+
+        # show the gui
+        MainWindow.show()
+
+        sys.exit(app.exec_())
+
+
 #%% run main
 if __name__ == "__main__":
     main()
