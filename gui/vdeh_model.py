@@ -3,7 +3,7 @@
 VDEH_model
 """
 
-__component_version__ = "1.0"
+__component_version__ = "1.1"
 __license__ = "MIT License"
 
 #%% import modules/libraries
@@ -201,6 +201,25 @@ def collect_data(report_paths, logger=None):
 
 
 
+def simple_export(dict_of_dfs, output_path, logger=None):
+    writer = pandas.ExcelWriter(output_path, engine="xlsxwriter")
+
+    try:
+        for k,v in dict_of_dfs.items():
+            v.to_excel(writer, k, index=False)
+        writer.close()
+        if logger: logger.log(f'Data Saved to file - {output_path}')
+        
+    except Exception as e:
+        if logger:
+            logger.log(
+                "error", f"Unable to save output - {e}"
+            )
+        if logger:
+            logger.log("error", traceback.format_exc())
+    
+    
+
 #%% define classes
 
 
@@ -304,6 +323,8 @@ class vdeh_model:
         self.column_names,self.model_data = collect_data(
             self.input_paths,self.logger
         )
+        
+        
 
     def generate_full_report(self):
         # grab column name settings

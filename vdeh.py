@@ -58,7 +58,7 @@ requires this behavior)
 """
 
 
-__version__ = "5.0"
+__version__ = "5.1"
 __license__ = "MIT License"
 __license_text__ = """
 MIT License

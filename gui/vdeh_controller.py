@@ -4,12 +4,13 @@ VDEH_controller
 
 """
 
-__component_version__ = "1.0"
+__component_version__ = "1.1"
 __license__ = "MIT License"
 
 
 #%% import modules/libraries
 from .vdeh_form import Ui_MainWindow
+from .vdeh_model import collect_data, simple_export
 from PyQt5.QtWidgets import QFileDialog, QListWidgetItem, QMessageBox
 from PyQt5.QtWidgets import QTextEdit
 import pandas
@@ -189,6 +190,14 @@ class vdeh_main_window(Ui_MainWindow):
             self.action_extract_data
         )
         
+        self.pushButton_extract_data.clicked.connect(
+            self.action_extract_data_and_save    
+        )
+        
+        self.pushButton_extract_data_and_analyze.clicked.connect(
+            self.action_extract_data_and_analyze    
+        )
+        
         # buttons for the help section
         self.menu_User_Manual.triggered.connect(
             self.action_user_manual
@@ -196,6 +205,8 @@ class vdeh_main_window(Ui_MainWindow):
         self.menu_About.triggered.connect(
             self.action_about
         )
+        
+        
         
         # set initial state of gui
         self.pushButton_clear_vevolab_files.setHidden(True)
@@ -316,6 +327,25 @@ class vdeh_main_window(Ui_MainWindow):
         self.model.check_data(self.model)
         print(self.model.column_names)
         print(self.model.model_data)
+        
+    def action_extract_data_and_save(self):
+        if not self.model.output_path:
+            self.logger.log(
+                'warning','no output path - unable to extract and save data'
+            )
+        else:
+            print(self.model.column_names)
+            print(self.model.model_data)
+            self.model.check_data(self.model)
+        
+            simple_export(
+                {'simple_summary':self.model.model_data}, self.model.output_path
+            )
+            
+    def action_extract_data_and_analyze(self):
+        # !!!
+        print('...')
+    
         
     def action_reset_form(self):
         self.action_clear_vevolab_files()

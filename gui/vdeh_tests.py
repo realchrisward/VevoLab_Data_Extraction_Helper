@@ -4,6 +4,9 @@ VDEH Tests
 
 """
 
+__component_version__ = "0.1"
+__license__ = "MIT License"
+
 # good VevoLab File and Settings for Extraction
 
 # good VevoLab File and Settings for Extraction and Analysis
@@ -19,3 +22,7 @@ VDEH Tests
     # Settings File includes extra sheets, settings
     
     # ...
+    
+"""
+This is where I would put my tests...If I had any!
+"""
