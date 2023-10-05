@@ -91,7 +91,7 @@ V 1.0 -> 2.0
                             
 """
 
-__version__ = '4.1'
+__version__ = '4.2'
 
 
 #%% import libraries
@@ -534,11 +534,15 @@ def main():
                             sum(data_list) / len(data_list)
                         
                         except Exception:
-                            logging.error(
-                                'ERROR: issue summarizing collected data'
+                            logging.warning(
+                                'non-numeric data - ' +\
+                                f'{os.path.basename(current_file)}: ' +\
+                                f'{first_key} -> {second_key}: ' +\
+                                f'{report_dict[first_key][second_key]}'
                                 )
                             logging.error(traceback.format_exc())
-                            report_dict[first_key][second_key] = 'ERROR_NA'
+                            report_dict[first_key][second_key] = \
+                                ','.join(report_dict[first_key][second_key])
 
                         
             current_df = pandas.DataFrame.from_dict(report_dict,orient = 'index')
@@ -547,6 +551,14 @@ def main():
             output_df_columns = ['Animal ID','Series Date']+list(
                     ColumnStyles.values()
                     )
+            
+            # add columns to the current_df in case not all columns are present
+            # ie different files provide different subsets of outcome measures
+            for col in output_df_columns:
+                if col not in current_df.columns:
+                    current_df.loc[:,col] = pandas.NA
+                    
+            
             
             output_df = current_df[output_df_columns]
             
