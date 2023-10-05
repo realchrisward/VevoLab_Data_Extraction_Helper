@@ -4,14 +4,16 @@ VDEH_controller
 
 """
 
-__component_version__ = "1.0"
+__component_version__ = "1.1"
 __license__ = "MIT License"
 
 
 #%% import modules/libraries
-from .vdeh_form import Ui_MainWindow
+# from .vdeh_form import Ui_MainWindow
+from .vdeh_model import simple_export
+from PyQt5 import uic
 from PyQt5.QtWidgets import QFileDialog, QListWidgetItem, QMessageBox
-from PyQt5.QtWidgets import QTextEdit
+from PyQt5.QtWidgets import QTextEdit, QMainWindow
 import pandas
 import logging
 import sys
@@ -121,8 +123,11 @@ class VDEH_Logger():
                     f'<span style="color:{gui_color}"><{gui_style}>'
                     +f'{message}'
                     +f'</{gui_style}></span><br>'
-                    )
                 )
+            )
+            self.gui_handler.verticalScrollBar().setValue(
+                self.gui_handler.verticalScrollBar().maximum()
+            )
         
 
 
@@ -131,9 +136,16 @@ class VDEH_Logger():
 
 
 #%% define classes
-class vdeh_main_window(Ui_MainWindow):
-    def __init__(self, MainWindow, model):
-        self.setupUi(MainWindow)
+#class vdeh_main_window(Ui_MainWindow):
+class vdeh_main_window(QMainWindow):
+    def __init__(self,model):
+        super(vdeh_main_window, self).__init__()
+        
+        uic.loadUi('./gui/vdeh_form_lite.ui',self)
+        
+        self.setWindowTitle('VevoLab Data Extraction Helper')
+        
+        #self.setupUi(MainWindow)
         self.model = model
 
         self.logger = VDEH_Logger(
@@ -156,15 +168,16 @@ class vdeh_main_window(Ui_MainWindow):
         self.pushButton_clear_vevolab_files.clicked.connect(
             self.action_clear_vevolab_files
         )
-        self.pushButton_load_metadata_settings_file.clicked.connect(
-            self.action_load_metadata_settings_file
-        )
-        self.menu_Load_Metadata_Settings_File.triggered.connect(
-            self.action_load_metadata_settings_file
-        )
-        self.pushButton_clear_metadata_settings_file.clicked.connect(
-            self.action_clear_metadata_settings_file
-        )
+        
+        # self.pushButton_load_metadata_settings_file.clicked.connect(
+        #     self.action_load_metadata_settings_file
+        # )
+        # self.menu_Load_Metadata_Settings_File.triggered.connect(
+        #     self.action_load_metadata_settings_file
+        # )
+        # self.pushButton_clear_metadata_settings_file.clicked.connect(
+        #     self.action_clear_metadata_settings_file
+        # )
         self.pushButton_set_output_path.clicked.connect(
             self.action_set_output_path
         )
@@ -185,9 +198,17 @@ class vdeh_main_window(Ui_MainWindow):
         
         
         # buttons for launching extractor and analyzer
-        self.pushButton_generate_metadata_settings_template.clicked.connect(
-            self.action_extract_data
+        # self.pushButton_generate_metadata_settings_template.clicked.connect(
+        #     self.action_extract_data
+        # )
+        
+        self.pushButton_extract_data.clicked.connect(
+            self.action_extract_data_and_save    
         )
+        
+        # self.pushButton_extract_data_and_analyze.clicked.connect(
+        #     self.action_extract_data_and_analyze    
+        # )
         
         # buttons for the help section
         self.menu_User_Manual.triggered.connect(
@@ -197,9 +218,11 @@ class vdeh_main_window(Ui_MainWindow):
             self.action_about
         )
         
+        
+        
         # set initial state of gui
         self.pushButton_clear_vevolab_files.setHidden(True)
-        self.pushButton_clear_metadata_settings_file.setHidden(True)
+        # self.pushButton_clear_metadata_settings_file.setHidden(True)
         self.pushButton_clear_output_path.setHidden(True)
 
     def action_load_vevolab_files(self):
@@ -231,62 +254,62 @@ class vdeh_main_window(Ui_MainWindow):
             'VevoLab Report files cleared'
             )
 
-    def action_load_metadata_settings_file(self):
-        self.model.settings_path = QFileDialog.getOpenFileName(
-            None,
-            "Select Metadata/Settings File",
-            "",
-            "All Files (*);;Excel Files (*.xlsx)",
-        )[0]
-        self.label_metadata_settings_file.setText(
-            f"Metadata/Settings File: {self.model.settings_path}"
-        )
-        self.model.load_settings_from_file(self.model)
-        self.pushButton_clear_metadata_settings_file.setHidden(False)
-        self.pushButton_load_metadata_settings_file.setHidden(True)
-        self.logger.log(
-            'info',
-            f'Metadata/Settings file selected: {self.model.settings_path}'
-            )
+    # def action_load_metadata_settings_file(self):
+    #     self.model.settings_path = QFileDialog.getOpenFileName(
+    #         None,
+    #         "Select Metadata/Settings File",
+    #         "",
+    #         "All Files (*);;Excel Files (*.xlsx)",
+    #     )[0]
+    #     self.label_metadata_settings_file.setText(
+    #         f"Metadata/Settings File: {self.model.settings_path}"
+    #     )
+    #     self.model.load_settings_from_file(self.model)
+    #     self.pushButton_clear_metadata_settings_file.setHidden(False)
+    #     self.pushButton_load_metadata_settings_file.setHidden(True)
+    #     self.logger.log(
+    #         'info',
+    #         f'Metadata/Settings file selected: {self.model.settings_path}'
+    #         )
 
-    def action_clear_metadata_settings_file(self):
-        self.model.settings_path = str()
+    # def action_clear_metadata_settings_file(self):
+    #     self.model.settings_path = str()
         
-        # settings
-        self.animal_data = pandas.DataFrame()
-        self.model.timepoint_data = pandas.DataFrame()
-        self.model.derived_data = pandas.DataFrame()
-        self.model.column_names = pandas.DataFrame()
-        self.model.model = pandas.DataFrame()
+    #     # settings
+    #     self.animal_data = pandas.DataFrame()
+    #     self.model.timepoint_data = pandas.DataFrame()
+    #     self.model.derived_data = pandas.DataFrame()
+    #     self.model.column_names = pandas.DataFrame()
+    #     self.model.model = pandas.DataFrame()
         
-        self.model.settings_changed = False
+    #     self.model.settings_changed = False
         
-        self.label_metadata_settings_file.setText(
-            "Metadata/Settings File: _____"
-        )
-        self.pushButton_clear_metadata_settings_file.setHidden(True)
-        self.pushButton_load_metadata_settings_file.setHidden(False)
-        self.logger.log(
-            'info',
-            'Metadata/Settings file cleared'
-            )
+    #     self.label_metadata_settings_file.setText(
+    #         "Metadata/Settings File: _____"
+    #     )
+    #     self.pushButton_clear_metadata_settings_file.setHidden(True)
+    #     self.pushButton_load_metadata_settings_file.setHidden(False)
+    #     self.logger.log(
+    #         'info',
+    #         'Metadata/Settings file cleared'
+    #         )
         
-    def action_save_metadata_settings_file(self):
-        new_output_path = QFileDialog.getSaveFileName(
-            None,
-            "Select filename for saved Metadata/Settings file",
-            "",
-            "Excel File (*.xlsx)",
-            )[0]
-        self.model.save_settings_to_file(self.model,new_output_path)
-        self.model.settings_path = new_output_path
-        self.label_metadata_settings_file.setText(
-            f"Metadata/Settings File: {self.model.settings_path}"
-        )
-        self.logger.log(
-            'info',
-            f'Metadata/Settings File saved - and set as current settings: {self.model.settings_path}'
-            )
+    # def action_save_metadata_settings_file(self):
+    #     new_output_path = QFileDialog.getSaveFileName(
+    #         None,
+    #         "Select filename for saved Metadata/Settings file",
+    #         "",
+    #         "Excel File (*.xlsx)",
+    #         )[0]
+    #     self.model.save_settings_to_file(self.model,new_output_path)
+    #     self.model.settings_path = new_output_path
+    #     self.label_metadata_settings_file.setText(
+    #         f"Metadata/Settings File: {self.model.settings_path}"
+    #     )
+    #     self.logger.log(
+    #         'info',
+    #         f'Metadata/Settings File saved - and set as current settings: {self.model.settings_path}'
+    #         )
     
     def action_set_output_path(self):
         self.model.output_path = QFileDialog.getSaveFileName(
@@ -316,6 +339,26 @@ class vdeh_main_window(Ui_MainWindow):
         self.model.check_data(self.model)
         print(self.model.column_names)
         print(self.model.model_data)
+        
+    def action_extract_data_and_save(self):
+        if not self.model.output_path:
+            self.logger.log(
+                'warning','no output path - unable to extract and save data'
+            )
+        else:
+            print(self.model.column_names)
+            print(self.model.model_data)
+            self.model.check_data(self.model)
+        
+            simple_export(
+                {'simple_summary':self.model.model_data}, self.model.output_path
+            )
+            self.logger.log('info','Finished Data Extraction',gui_style='strong')
+            
+    def action_extract_data_and_analyze(self):
+        # !!!
+        print('...')
+    
         
     def action_reset_form(self):
         self.action_clear_vevolab_files()

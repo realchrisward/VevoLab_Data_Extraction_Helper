@@ -58,7 +58,7 @@ requires this behavior)
 """
 
 
-__version__ = "5.0"
+__version__ = "5.1"
 __license__ = "MIT License"
 __license_text__ = """
 MIT License
@@ -150,10 +150,14 @@ def main():
 
         app = QtWidgets.QApplication(sys.argv)
 
-        MainWindow = QtWidgets.QMainWindow()
+        #MainWindow = QtWidgets.QMainWindow()
 
+        # ui = vdeh_controller.vdeh_main_window(
+        #     MainWindow, vdeh_model.vdeh_model
+        # )
+        
         ui = vdeh_controller.vdeh_main_window(
-            MainWindow, vdeh_model.vdeh_model
+            vdeh_model.vdeh_model
         )
         ui.model.version_info = {
             "VevoLab Data Extraction Helper": __version__,
@@ -169,7 +173,8 @@ def main():
             ui.model.log_level = args.loglevel
 
         # show the gui
-        MainWindow.show()
+        # MainWindow.show()
+        ui.show()
 
         sys.exit(app.exec_())
 
