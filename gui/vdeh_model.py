@@ -58,7 +58,60 @@ def collect_data(report_paths, logger=None):
             study_dict = {}
             # iterate through series (split using 'Series Name' - first row
             # will contain text attributable to Series Name)
-            for i, b in enumerate(report_text.split("Series Name,")):
+            # first part of split is study level metadata and is reviewed first
+            # it is otherwise skipped
+            header = report_text.split("Series Name")[0]
+            header_rows = []
+            header_rows = header.split("\n")
+            
+            FLAG_version = 0
+            FLAG_notes = 0
+            
+            for r in header_rows[1:]:
+                columns = []
+                columns = r.split(",")
+                study_notes = []
+                
+                if columns[0] == "" or columns[0] == "No measurements found":
+                    FLAG_version = 0                                        
+                    continue
+                
+                elif columns[0] == "Version Information":
+                    FLAG_version = 1
+                    FLAG_notes = 0
+                    continue
+                
+                elif columns[0] == "Study Notes":
+                    FLAG_version = 0
+                    FLAG_notes = 1
+                    if len(columns) > 1:
+                        study_notes.append(','.join(columns[1:]))
+                
+                
+                elif FLAG_version > 0:
+                    if FLAG_version == 1:
+                        version_header = r
+                        column_names["MetaData Fields"].append(version_header)
+
+                    else:
+                        study_dict[','.join(version_header)] = \
+                            ','.join(columns)
+                    FLAG_version += 1
+                    
+                    
+                elif FLAG_notes > 0:
+                    if FLAG_notes == 1:
+                        study_notes.append(r)
+                        study_dict['Study Notes'] = '\n'.join(study_notes)
+                        column_names["MetaData Fields"].append('Study Notes')
+                        
+                else:
+                    if len(columns) > 1:
+                        study_dict[columns[0]] = ','.join(columns[1:])
+                        column_names["MetaData Fields"].append(columns[0])
+        
+
+            for i, b in enumerate(report_text.split("Series Name,")[1:]):
 
                 # iterate through sections
                 rows = []
@@ -69,6 +122,9 @@ def collect_data(report_paths, logger=None):
                 FLAG_calculations = 0
                 FLAG_measurements = 0
                 FLAG_version = 0
+                FLAG_notes = 0
+                
+                series_notes = []
 
                 # prepare the report dict
                 report_dict[rows[0]] = {"Series Name":rows[0]}
@@ -80,10 +136,11 @@ def collect_data(report_paths, logger=None):
                     # 1st block will be study info metadata
 
                     # clear flags indicating calculation or measurement section
-                    if columns[0] == "":
+                    if columns[0] == "" or columns[0] == "No measurements found":
                         FLAG_calculations = 0
                         FLAG_measurements = 0
                         FLAG_version = 0
+                        
                         continue
 
                     # check and set flags for whether the line indicates
@@ -93,19 +150,37 @@ def collect_data(report_paths, logger=None):
                         FLAG_calculations = 1
                         FLAG_measurements = 0
                         FLAG_version = 0
+                        FLAG_notes = 0
                         continue
 
                     elif columns[0] == "Measurement":
                         FLAG_measurements = 1
                         FLAG_calculations = 0
                         FLAG_version = 0
+                        FLAG_notes = 0
                         continue
 
                     elif columns[0] == "Version Information":
                         FLAG_version = 1
                         FLAG_calculations = 0
                         FLAG_measurements = 0
+                        FLAG_notes = 0
                         continue
+                    
+                    elif columns[0] == "Series Notes":
+                        FLAG_version = 0
+                        FLAG_calculations = 0
+                        FLAG_measurements = 0
+                        FLAG_notes = 1
+                        if len(columns) > 1:
+                            series_notes.append(','.join(columns[1:]))
+
+                    # !!! need to add check for bad case of user entering "Application" in series notes !!!
+                    elif columns[0] == "Application":
+                        FLAG_version = 0
+                        FLAG_calculations = 0
+                        FLAG_measurements = 0
+                        FLAG_notes = 0
 
                     # if row is not a transition indicator, extract data if
                     # row is calculation or measurement data (add to list)
@@ -113,24 +188,33 @@ def collect_data(report_paths, logger=None):
                         FLAG_calculations == 0
                         and FLAG_measurements == 0
                         and FLAG_version == 0
+                        and FLAG_notes == 0
                     ):
                         column_names["MetaData Fields"].append(columns[0])
-                        # try:
-                        report_dict[rows[0]][columns[0]] = columns[1]
-                        # except IndexError: # no 2nd column
-                            # report_dict[rows[0]][columns[0]] = '###'
+                        report_dict[rows[0]][columns[0]] = ','.join(columns[1:])
+
                         if i == 0:
-                            # try:
-                                study_dict[columns[0]] = columns[1]
-                            # except IndexError: # no 2nd column
-                                # study_dict[columns[0]] = '###'
+                            study_dict[columns[0]] = columns[1]
+                            
+                    elif FLAG_notes > 0:
+                        if FLAG_notes == 1:
+                            report_dict[rows[0]]["Series Notes"] = '\n'.join(
+                                series_notes
+                            )
+                            
+                        else:
+                            series_notes.append(r)
+                            report_dict[rows[0]]["Series Notes"] = '\n'.join(
+                                series_notes
+                            )
+                        FLAG_notes += 1
 
                     elif FLAG_version > 0:
                         if FLAG_version == 1:
-                            version_header = [c for c in columns]
+                            version_header = r
 
                         else:
-                            study_dict[','.join(version_header)] = \
+                            study_dict[version_header] = \
                                 ','.join(columns)
                         FLAG_version += 1
 
@@ -177,14 +261,14 @@ def collect_data(report_paths, logger=None):
                         ) / len(data_list)
 
                     except Exception:
-                        logger.log(
+                        if logger: logger.log(
                             "error",
                             (
                                 "issue summarizing collected data "
                                 + "{f}:{first_key} - {second_key}"
                             ),
                         )
-                        logger.log("error", traceback.format_exc())
+                        if logger: logger.log("error", traceback.format_exc())
                         report_dict[first_key][second_key] = "ERROR_NA"
 
         current_df = pandas.DataFrame.from_dict(
@@ -194,8 +278,8 @@ def collect_data(report_paths, logger=None):
         df = pandas.concat([df,current_df],axis=0, join='outer')
 
     # clean up columns names to remove duplicates
-    for key in column_names:
-        column_names[key] = list(set(column_names[key]))
+    for k, v in column_names.items():
+        column_names[k] = list(set(v))
 
     return column_names, df
 
@@ -363,6 +447,7 @@ class vdeh_model:
                     report_dict[rows[0]] = {}
                     FLAG_calculations = 0
                     FLAG_measurements = 0
+                    FLAG_notes = 0
 
                     for r in b.split("\n"):
                         columns = []
@@ -380,13 +465,21 @@ class vdeh_model:
                         elif columns[0] == "Calculation":
                             FLAG_calculations = 1
                             FLAG_measurements = 0
+                            FLAG_notes = 0
                             continue
 
                         elif columns[0] == "Measurement":
                             FLAG_measurements = 1
                             FLAG_calculations = 0
+                            FLAG_notes = 0
                             continue
 
+
+                        elif columns[0] == "Series Notes":
+                            FLAG_calculations = 0
+                            FLAG_measurements = 0
+                            FLAG_notes = 1
+                            
                         # if row is not a transition indicator, extract data if
                         # row is calculation or measurement data (add to list) -...
                         # take average at the end
