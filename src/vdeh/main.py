@@ -58,7 +58,7 @@ requires this behavior)
 """
 
 
-__version__ = "5.1"
+__version__ = "5.2"
 __license__ = "MIT License"
 __license_text__ = """
 MIT License
@@ -84,7 +84,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-#%% import modules/libraries
+# %% import modules/libraries
 # import gui
 import gui.vdeh_controller as vdeh_controller
 import gui.vdeh_model as vdeh_model
@@ -93,16 +93,14 @@ import sys
 import argparse
 from PyQt5 import QtWidgets
 
-#%% define functions/classes
+# %% define functions/classes
 
 
-#%% define main
+# %% define main
 def main():
 
     # parse command line arguments if provided
-    parser = argparse.ArgumentParser(
-        description="VevoLab Data Extraction Helper"
-    )
+    parser = argparse.ArgumentParser(description="VevoLab Data Extraction Helper")
     parser.add_argument(
         "-i",
         "--input",
@@ -150,15 +148,13 @@ def main():
 
         app = QtWidgets.QApplication(sys.argv)
 
-        #MainWindow = QtWidgets.QMainWindow()
+        # MainWindow = QtWidgets.QMainWindow()
 
         # ui = vdeh_controller.vdeh_main_window(
         #     MainWindow, vdeh_model.vdeh_model
         # )
-        
-        ui = vdeh_controller.vdeh_main_window(
-            vdeh_model.vdeh_model
-        )
+
+        ui = vdeh_controller.vdeh_main_window(vdeh_model.vdeh_model)
         ui.model.version_info = {
             "VevoLab Data Extraction Helper": __version__,
             "vdeh model": vdeh_model.__component_version__,
@@ -179,6 +175,6 @@ def main():
         sys.exit(app.exec_())
 
 
-#%% run main
+# %% run main
 if __name__ == "__main__":
     main()

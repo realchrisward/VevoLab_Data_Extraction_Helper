@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vdeh"
+dynamic = [
+  "version",
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "pingouin",
+  "PyQt6",
+  "scipy",
+  "seaborn",
+  "statsmodels",
+  "xlrd",
+  "XlsxWriter",
+  "xlwt"
+]
+
+requires-python = ">= 3.9"
+maintainers = [
+  {name = "Chris Ward", email = "ward.chris.s@gmail.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["Echocardiography","VisualSonics","VevoLab"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python"
+]
+
+
+[project.urls]
+Repository = "https://github.com/realchrisward/VevoLab_Data_Extraction_Helper"
+
+[tool.hatch.version]
+path = "src/vdeh/main.py"
