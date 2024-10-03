@@ -3,10 +3,10 @@
 VDEH_model
 """
 
-__component_version__ = "1.1"
+__component_version__ = "1.2"
 __license__ = "MIT License"
 
-#%% import modules/libraries
+# %% import modules/libraries
 from dataclasses import dataclass
 
 import pandas
@@ -22,7 +22,7 @@ import traceback
 # import sys
 # import datetime
 
-#%% define functions
+# %% define functions
 
 
 def collect_data(report_paths, logger=None):
@@ -63,53 +63,49 @@ def collect_data(report_paths, logger=None):
             header = report_text.split("Series Name")[0]
             header_rows = []
             header_rows = header.split("\n")
-            
+
             FLAG_version = 0
             FLAG_notes = 0
-            
+
             for r in header_rows[1:]:
                 columns = []
                 columns = r.split(",")
                 study_notes = []
-                
+
                 if columns[0] == "" or columns[0] == "No measurements found":
-                    FLAG_version = 0                                        
+                    FLAG_version = 0
                     continue
-                
+
                 elif columns[0] == "Version Information":
                     FLAG_version = 1
                     FLAG_notes = 0
                     continue
-                
+
                 elif columns[0] == "Study Notes":
                     FLAG_version = 0
                     FLAG_notes = 1
                     if len(columns) > 1:
-                        study_notes.append(','.join(columns[1:]))
-                
-                
+                        study_notes.append(",".join(columns[1:]))
+
                 elif FLAG_version > 0:
                     if FLAG_version == 1:
                         version_header = r
                         column_names["MetaData Fields"].append(version_header)
 
                     else:
-                        study_dict[','.join(version_header)] = \
-                            ','.join(columns)
+                        study_dict[",".join(version_header)] = ",".join(columns)
                     FLAG_version += 1
-                    
-                    
+
                 elif FLAG_notes > 0:
                     if FLAG_notes == 1:
                         study_notes.append(r)
-                        study_dict['Study Notes'] = '\n'.join(study_notes)
-                        column_names["MetaData Fields"].append('Study Notes')
-                        
+                        study_dict["Study Notes"] = "\n".join(study_notes)
+                        column_names["MetaData Fields"].append("Study Notes")
+
                 else:
                     if len(columns) > 1:
-                        study_dict[columns[0]] = ','.join(columns[1:])
+                        study_dict[columns[0]] = ",".join(columns[1:])
                         column_names["MetaData Fields"].append(columns[0])
-        
 
             for i, b in enumerate(report_text.split("Series Name,")[1:]):
 
@@ -123,11 +119,11 @@ def collect_data(report_paths, logger=None):
                 FLAG_measurements = 0
                 FLAG_version = 0
                 FLAG_notes = 0
-                
+
                 series_notes = []
 
                 # prepare the report dict
-                report_dict[rows[0]] = {"Series Name":rows[0]}
+                report_dict[rows[0]] = {"Series Name": rows[0]}
                 for r in rows[1:]:
                     columns = []
                     columns = r.split(",")
@@ -140,7 +136,7 @@ def collect_data(report_paths, logger=None):
                         FLAG_calculations = 0
                         FLAG_measurements = 0
                         FLAG_version = 0
-                        
+
                         continue
 
                     # check and set flags for whether the line indicates
@@ -166,14 +162,14 @@ def collect_data(report_paths, logger=None):
                         FLAG_measurements = 0
                         FLAG_notes = 0
                         continue
-                    
+
                     elif columns[0] == "Series Notes":
                         FLAG_version = 0
                         FLAG_calculations = 0
                         FLAG_measurements = 0
                         FLAG_notes = 1
                         if len(columns) > 1:
-                            series_notes.append(','.join(columns[1:]))
+                            series_notes.append(",".join(columns[1:]))
 
                     # !!! need to add check for bad case of user entering "Application" in series notes !!!
                     elif columns[0] == "Application":
@@ -191,20 +187,20 @@ def collect_data(report_paths, logger=None):
                         and FLAG_notes == 0
                     ):
                         column_names["MetaData Fields"].append(columns[0])
-                        report_dict[rows[0]][columns[0]] = ','.join(columns[1:])
+                        report_dict[rows[0]][columns[0]] = ",".join(columns[1:])
 
                         if i == 0:
                             study_dict[columns[0]] = columns[1]
-                            
+
                     elif FLAG_notes > 0:
                         if FLAG_notes == 1:
-                            report_dict[rows[0]]["Series Notes"] = '\n'.join(
+                            report_dict[rows[0]]["Series Notes"] = "\n".join(
                                 series_notes
                             )
-                            
+
                         else:
                             series_notes.append(r)
-                            report_dict[rows[0]]["Series Notes"] = '\n'.join(
+                            report_dict[rows[0]]["Series Notes"] = "\n".join(
                                 series_notes
                             )
                         FLAG_notes += 1
@@ -214,8 +210,7 @@ def collect_data(report_paths, logger=None):
                             version_header = r
 
                         else:
-                            study_dict[version_header] = \
-                                ','.join(columns)
+                            study_dict[version_header] = ",".join(columns)
                         FLAG_version += 1
 
                     elif FLAG_calculations == 1:
@@ -237,13 +232,11 @@ def collect_data(report_paths, logger=None):
                         ].append("_".join(columns[0:3]))
                         # place the data
                         if "_".join(columns[0:3]) in report_dict[rows[0]]:
-                            report_dict[rows[0]][
-                                "_".join(columns[0:3])
-                            ].append(columns[4])
-                        else:
-                            report_dict[rows[0]]["_".join(columns[0:3])] = [
+                            report_dict[rows[0]]["_".join(columns[0:3])].append(
                                 columns[4]
-                            ]
+                            )
+                        else:
+                            report_dict[rows[0]]["_".join(columns[0:3])] = [columns[4]]
                 for k, v in study_dict.items():
                     report_dict[rows[0]][k] = v
 
@@ -253,29 +246,28 @@ def collect_data(report_paths, logger=None):
                     data_list = []
                     try:
                         data_list = [
-                            float(i)
-                            for i in report_dict[first_key][second_key]
+                            float(i) for i in report_dict[first_key][second_key]
                         ]
-                        report_dict[first_key][second_key] = sum(
+                        report_dict[first_key][second_key] = sum(data_list) / len(
                             data_list
-                        ) / len(data_list)
+                        )
 
                     except Exception:
-                        if logger: logger.log(
-                            "error",
-                            (
-                                "issue summarizing collected data "
-                                + "{f}:{first_key} - {second_key}"
-                            ),
-                        )
-                        if logger: logger.log("error", traceback.format_exc())
+                        if logger:
+                            logger.log(
+                                "error",
+                                (
+                                    "issue summarizing collected data "
+                                    + "{f}:{first_key} - {second_key}"
+                                ),
+                            )
+                        if logger:
+                            logger.log("error", traceback.format_exc())
                         report_dict[first_key][second_key] = "ERROR_NA"
 
-        current_df = pandas.DataFrame.from_dict(
-            report_dict, orient="index"
-        )
+        current_df = pandas.DataFrame.from_dict(report_dict, orient="index")
 
-        df = pandas.concat([df,current_df],axis=0, join='outer')
+        df = pandas.concat([df, current_df], axis=0, join="outer")
 
     # clean up columns names to remove duplicates
     for k, v in column_names.items():
@@ -284,27 +276,24 @@ def collect_data(report_paths, logger=None):
     return column_names, df
 
 
-
 def simple_export(dict_of_dfs, output_path, logger=None):
     writer = pandas.ExcelWriter(output_path, engine="xlsxwriter")
 
     try:
-        for k,v in dict_of_dfs.items():
+        for k, v in dict_of_dfs.items():
             v.to_excel(writer, k, index=False)
         writer.close()
-        if logger: logger.log(f'Data Saved to file - {output_path}')
-        
+        if logger:
+            logger.log(f"Data Saved to file - {output_path}")
+
     except Exception as e:
         if logger:
-            logger.log(
-                "error", f"Unable to save output - {e}"
-            )
+            logger.log("error", f"Unable to save output - {e}")
         if logger:
             logger.log("error", traceback.format_exc())
-    
-    
 
-#%% define classes
+
+# %% define classes
 
 
 @dataclass
@@ -353,9 +342,7 @@ class vdeh_model:
                 self.logger.log("info", "No Timepoint Data Found")
 
         try:
-            self.model = pandas.read_excel(
-                self.settings_path, sheet_name="model"
-            )
+            self.model = pandas.read_excel(self.settings_path, sheet_name="model")
         except Exception:
             if self.logger:
                 self.logger.log("info", "No Model Information Found")
@@ -370,8 +357,8 @@ class vdeh_model:
                     "warning",
                     "No Column Names Found - default columns will be used",
                 )
-            self.column_names,self.model_data = collect_data(
-                self.input_paths,self.logger
+            self.column_names, self.model_data = collect_data(
+                self.input_paths, self.logger
             )
 
         try:
@@ -383,32 +370,28 @@ class vdeh_model:
                 self.logger.log("info", "No Settings For Derived Data Found")
 
     def save_settings_to_file(self, new_settings_path):
-        writer = pandas.ExcelWriter(
-            self.new_settings_path, engine="xlsxwriter"
-        )
+        writer = pandas.ExcelWriter(self.new_settings_path, engine="xlsxwriter")
         if self.animal_data.shape[0] > 0:
-            self.animal_data.to_excel(writer, "animal data", index=False)
+            self.animal_data.to_excel(writer, sheet_name="animal data", index=False)
 
         if self.timepoint_data.shape[0] > 0:
-            self.timepoint_data.to_excel(writer, "timepoint data", index=False)
+            self.timepoint_data.to_excel(
+                writer, sheet_name="timepoint data", index=False
+            )
 
         if self.derived_data.shape[0] > 0:
-            self.derived_data.to_excel(writer, "derived data", index=False)
+            self.derived_data.to_excel(writer, sheet_name="derived data", index=False)
 
         if self.column_names.shape[0] > 0:
-            self.column_names.to_excel(writer, "column names", index=False)
+            self.column_names.to_excel(writer, sheet_name="column names", index=False)
 
         if self.model.shape[0] > 0:
-            self.model.to_excel(writer, "model", index=False)
+            self.model.to_excel(writer, sheet_name="model", index=False)
 
         writer.save()
 
     def check_data(self):
-        self.column_names,self.model_data = collect_data(
-            self.input_paths,self.logger
-        )
-        
-        
+        self.column_names, self.model_data = collect_data(self.input_paths, self.logger)
 
     def generate_full_report(self):
         # grab column name settings
@@ -422,7 +405,7 @@ class vdeh_model:
                 )
             )
 
-            #% grab data from the reports
+            # % grab data from the reports
             primary_df = pandas.DataFrame()
             Study_Name = ""
             for current_file in self.report_path:
@@ -474,12 +457,11 @@ class vdeh_model:
                             FLAG_notes = 0
                             continue
 
-
                         elif columns[0] == "Series Notes":
                             FLAG_calculations = 0
                             FLAG_measurements = 0
                             FLAG_notes = 1
-                            
+
                         # if row is not a transition indicator, extract data if
                         # row is calculation or measurement data (add to list) -...
                         # take average at the end
@@ -496,18 +478,18 @@ class vdeh_model:
                                 ).group("text")
                             # place the data
                             if "_".join(columns[0:3]) in report_dict[rows[0]]:
-                                report_dict[rows[0]][
-                                    "_".join(columns[0:3])
-                                ].append(columns[4])
+                                report_dict[rows[0]]["_".join(columns[0:3])].append(
+                                    columns[4]
+                                )
                             else:
-                                report_dict[rows[0]][
-                                    "_".join(columns[0:3])
-                                ] = [columns[4]]
+                                report_dict[rows[0]]["_".join(columns[0:3])] = [
+                                    columns[4]
+                                ]
 
                         if columns[0] == "Series Date":
-                            report_dict[rows[0]][
-                                columns[0]
-                            ] = pandas.to_datetime(columns[1])
+                            report_dict[rows[0]][columns[0]] = pandas.to_datetime(
+                                columns[1]
+                            )
 
                         if columns[0] == "Animal ID":
                             report_dict[rows[0]][columns[0]] = columns[1]
@@ -529,23 +511,18 @@ class vdeh_model:
                             data_list = []
                             try:
                                 data_list = [
-                                    float(i)
-                                    for i in report_dict[first_key][second_key]
+                                    float(i) for i in report_dict[first_key][second_key]
                                 ]
                                 report_dict[first_key][second_key] = sum(
                                     data_list
                                 ) / len(data_list)
 
                             except Exception:
-                                logging.error(
-                                    "ERROR: issue summarizing collected data"
-                                )
+                                logging.error("ERROR: issue summarizing collected data")
                                 logging.error(traceback.format_exc())
                                 report_dict[first_key][second_key] = "ERROR_NA"
 
-                current_df = pandas.DataFrame.from_dict(
-                    report_dict, orient="index"
-                )
+                current_df = pandas.DataFrame.from_dict(report_dict, orient="index")
 
                 current_df = current_df.rename(columns=ColumnStyles)
                 output_df_columns = ["Animal ID", "Series Date"] + list(
@@ -584,9 +561,9 @@ class vdeh_model:
         if self.derived_data.shape[0] > 0:
             try:
                 if (
-                    self.derived_data[
-                        self.derived_data["calculation"] == "Age(days)"
-                    ]["Include"].values[0]
+                    self.derived_data[self.derived_data["calculation"] == "Age(days)"][
+                        "Include"
+                    ].values[0]
                     == 1
                 ):
                     primary_df["Age(days)"] = (
@@ -595,9 +572,9 @@ class vdeh_model:
                     ).astype(int)
 
                 if (
-                    self.derived_data[
-                        self.derived_data["calculation"] == "Age(wks)"
-                    ]["Include"].values[0]
+                    self.derived_data[self.derived_data["calculation"] == "Age(wks)"][
+                        "Include"
+                    ].values[0]
                     == 1
                 ):
                     primary_df["Age(wks)"] = (
@@ -606,9 +583,9 @@ class vdeh_model:
                     ).astype(int)
 
                 if (
-                    self.derived_data[
-                        self.derived_data["calculation"] == "Age(Mo)"
-                    ]["Include"].values[0]
+                    self.derived_data[self.derived_data["calculation"] == "Age(Mo)"][
+                        "Include"
+                    ].values[0]
                     == 1
                 ):
                     primary_df["Age(Mo)"] = (
@@ -617,9 +594,7 @@ class vdeh_model:
                     ).astype(int)
             except Exception as e:
                 if self.logger:
-                    self.logger.log(
-                        "error", f"Unable to calculate Age Data: {e}"
-                    )
+                    self.logger.log("error", f"Unable to calculate Age Data: {e}")
                 if self.logger:
                     self.logger.log("error", traceback.format_exc())
 
@@ -701,9 +676,7 @@ class vdeh_model:
                     ).astype(int)
             except Exception as e:
                 if self.logger:
-                    self.logger.log(
-                        "error", f"Unable to calculate Time In Study: {e}"
-                    )
+                    self.logger.log("error", f"Unable to calculate Time In Study: {e}")
                 if self.logger:
                     self.logger.log("error", traceback.format_exc())
 
@@ -737,9 +710,11 @@ class vdeh_model:
                     primary_df[horiz_split_var] == horiz_split_values[0]
                 ]
                 secondary_df.columns = [
-                    "{}_[{}]".format(c, horiz_split_values[0])
-                    if c not in self.animal_data.columns
-                    else c
+                    (
+                        "{}_[{}]".format(c, horiz_split_values[0])
+                        if c not in self.animal_data.columns
+                        else c
+                    )
                     for c in secondary_df.columns
                 ]
 
@@ -747,9 +722,7 @@ class vdeh_model:
                     t = horiz_split_values[i + 1]
 
                     temp_df = primary_df[primary_df[horiz_split_var] == t][
-                        ["Animal ID"]
-                        + ["Series Date"]
-                        + list(ColumnStyles.values())
+                        ["Animal ID"] + ["Series Date"] + list(ColumnStyles.values())
                     ]
                     temp_df.columns = [
                         "{}_[{}]".format(c, t) if c != "Animal ID" else c
@@ -766,18 +739,14 @@ class vdeh_model:
                             "_[{}]".format(t),
                         ),
                     )
-                #% prism style output
+                # % prism style output
                 split_var = self.model["factors"].values[-1]
                 group_splits = list(secondary_df[split_var].unique())
                 group_splits.sort()
 
-                col_split = re.compile(
-                    "(((?P<col>.+)_\[(?P<tp>.*)\])|((?P<alt>.+)))"
-                )
+                col_split = re.compile("(((?P<col>.+)_\[(?P<tp>.*)\])|((?P<alt>.+)))")
 
-                tertiery_df = secondary_df[
-                    secondary_df[split_var] == group_splits[0]
-                ]
+                tertiery_df = secondary_df[secondary_df[split_var] == group_splits[0]]
                 new_cols = []
                 for c in tertiery_df.columns:
                     temp_re = re.search(col_split, c)
@@ -822,7 +791,7 @@ class vdeh_model:
                 tertiery_df = tertiery_df[tc]
                 tertiery_df = tertiery_df.fillna("")
 
-            #% prepare for excel export
+            # % prepare for excel export
             stats_df = pandas.DataFrame()
             graphs_df = pandas.DataFrame()
 
@@ -830,9 +799,9 @@ class vdeh_model:
 
             try:
                 if (
-                    self.derived_data[
-                        self.derived_data["calculation"] == "KOMP_STYLE"
-                    ]["Include"].values[0]
+                    self.derived_data[self.derived_data["calculation"] == "KOMP_STYLE"][
+                        "Include"
+                    ].values[0]
                     == 1
                 ):
                     primary_df = primary_df.rename(
@@ -869,7 +838,7 @@ class vdeh_model:
                 graphs_df.to_excel(writer, "graphs", index=False)
                 worksheet = writer.sheets["graphs"]
 
-                #% run stats
+                # % run stats
                 # get list of independent factors
                 ind_vars = list(self.model["factors"].values)
                 iv_dict = {}
@@ -888,12 +857,8 @@ class vdeh_model:
                 # iterate through outcome measure columns and clean data for ANOVA
                 counter = 0
                 for c in ColumnStyles.values():
-                    temp_df = primary_df[
-                        [c] + list(self.model["factors"].values)
-                    ]
-                    temp_df.loc[:, c] = pandas.to_numeric(
-                        temp_df[c], errors="coerce"
-                    )
+                    temp_df = primary_df[[c] + list(self.model["factors"].values)]
+                    temp_df.loc[:, c] = pandas.to_numeric(temp_df[c], errors="coerce")
                     temp_df = temp_df.dropna()
 
                     temp_df["om"] = temp_df[c]
@@ -903,13 +868,13 @@ class vdeh_model:
                         temp_df[k] = temp_df[iv_dict_rev[k]]
                         temp_df["gp"] += temp_df[k].astype(str)
 
-                    homosced = pingouin.homoscedasticity(
-                        temp_df, dv="om", group="gp"
-                    )["pval"].values[0]
+                    homosced = pingouin.homoscedasticity(temp_df, dv="om", group="gp")[
+                        "pval"
+                    ].values[0]
                     try:
-                        normal = pingouin.normality(
-                            temp_df, dv="om", group="gp"
-                        )["pval"].values[0]
+                        normal = pingouin.normality(temp_df, dv="om", group="gp")[
+                            "pval"
+                        ].values[0]
                     except:
                         normal = "unable to test"
                     table = temp_df.anova(
@@ -934,12 +899,8 @@ class vdeh_model:
                         .reset_index()
                     )
                     agg_cols = agg_df.columns
-                    agg_df.columns = [
-                        i[0] if i[0] != c else i[1] for i in agg_cols
-                    ]
-                    agg_df["axis"] = (
-                        agg_df[ind_vars].astype(str).agg("_".join, axis=1)
-                    )
+                    agg_df.columns = [i[0] if i[0] != c else i[1] for i in agg_cols]
+                    agg_df["axis"] = agg_df[ind_vars].astype(str).agg("_".join, axis=1)
 
                     temp_plot = agg_df.plot(
                         kind="barh",
@@ -993,25 +954,20 @@ class vdeh_model:
                             )
 
                         pairs = list(
-                            itertools.combinations(
-                                temp_df["*".join(i)].unique(), 2
-                            )
+                            itertools.combinations(temp_df["*".join(i)].unique(), 2)
                         )
                         for p in pairs:
 
                             if (
                                 len(temp_df[temp_df["*".join(i)] == p[0]]) < 2
-                                or len(temp_df[temp_df["*".join(i)] == p[1]])
-                                < 2
+                                or len(temp_df[temp_df["*".join(i)] == p[1]]) < 2
                             ):
                                 pairwise_df = pairwise_df.append(
                                     pandas.DataFrame(
                                         {
                                             "outcome_measure": [c],
                                             "comparison": [
-                                                " vs ".join(
-                                                    [str(q) for q in p]
-                                                )
+                                                " vs ".join([str(q) for q in p])
                                             ],
                                             "notes": ["cannot compare"],
                                         }
@@ -1030,9 +986,7 @@ class vdeh_model:
                             pw_stats_df = temp_p_df
                             pw_stats_df.index = ["PAIRWISE"]
                             pw_stats_df["ttest pval"] = temp_p_df["p-val"]
-                            pw_stats_df["mwu pval"] = temp_np_df[
-                                "p-val"
-                            ].values[0]
+                            pw_stats_df["mwu pval"] = temp_np_df["p-val"].values[0]
                             pw_stats_df.pop("p-val")
                             pw_stats_df["outcome_measure"] = c
                             pw_stats_df["comparison"] = " vs ".join(
