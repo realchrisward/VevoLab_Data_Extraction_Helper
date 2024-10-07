@@ -58,7 +58,7 @@ requires this behavior)
 """
 
 
-__version__ = "5.2"
+__version__ = "5.4"
 __license__ = "MIT License"
 __license_text__ = """
 MIT License
@@ -86,12 +86,19 @@ SOFTWARE.
 
 # %% import modules/libraries
 # import gui
-import gui.vdeh_controller as vdeh_controller
-import gui.vdeh_model as vdeh_model
-import gui.vdeh_subgui_controller as vdeh_subgui_controller
+try:
+    from gui import vdeh_controller, vdeh_model, vdeh_subgui_controller
+except:
+    from .gui import vdeh_controller, vdeh_model, vdeh_subgui_controller
+# import gui.vdeh_controller as vdeh_controller
+# import gui.vdeh_model as vdeh_model
+# import gui.vdeh_subgui_controller as vdeh_subgui_controller
+import os
 import sys
 import argparse
-from PyQt5 import QtWidgets
+from PySide6 import QtWidgets
+from PySide6.QtUiTools import QUiLoader
+from PySide6.QtCore import QFile
 
 # %% define functions/classes
 
@@ -145,22 +152,29 @@ def main():
         pass
     else:
         # create the application
-
+        print("setting up loader")
+        loader = QUiLoader()
+        print("startup")
         app = QtWidgets.QApplication(sys.argv)
+        print("app started")
 
-        # MainWindow = QtWidgets.QMainWindow()
+        print("preparing ui file")
+        ui_file = QFile(
+            os.path.join(os.path.dirname(__file__), "gui/vdeh_form_lite.ui")
+        )
+        window_ui = loader.load(ui_file)
+        print("ui loaded")
+        window_ui.show()
+        print("ui test")
 
-        # ui = vdeh_controller.vdeh_main_window(
-        #     MainWindow, vdeh_model.vdeh_model
-        # )
-
-        ui = vdeh_controller.vdeh_main_window(vdeh_model.vdeh_model)
+        ui = vdeh_controller.vdeh_main_window(window_ui, vdeh_model.vdeh_model, loader)
         ui.model.version_info = {
             "VevoLab Data Extraction Helper": __version__,
             "vdeh model": vdeh_model.__component_version__,
             "vdeh gui": vdeh_controller.__component_version__,
             "vdeh subguis": vdeh_subgui_controller.__component_version__,
         }
+        print("ui test - main")
 
         # if user specified --dev or --loglevel update model
         if args.dev:
@@ -170,7 +184,7 @@ def main():
 
         # show the gui
         # MainWindow.show()
-        ui.show()
+        # ui.ui.show()
 
         sys.exit(app.exec_())
 

@@ -4,16 +4,19 @@ VDEH_controller
 
 """
 
-__component_version__ = "1.1"
+__component_version__ = "1.2"
 __license__ = "MIT License"
 
 
 # %% import modules/libraries
 # from .vdeh_form import Ui_MainWindow
 from .vdeh_model import simple_export
-from PyQt5 import uic
-from PyQt5.QtWidgets import QFileDialog, QListWidgetItem, QMessageBox
-from PyQt5.QtWidgets import QTextEdit, QMainWindow
+
+# from PySide6 import uic
+from PySide6.QtWidgets import QFileDialog, QListWidgetItem, QMessageBox
+from PySide6.QtWidgets import QTextEdit, QMainWindow
+
+
 import pandas
 import logging
 import sys
@@ -132,10 +135,19 @@ class VDEH_Logger:
 # %% define classes
 # class vdeh_main_window(Ui_MainWindow):
 class vdeh_main_window(QMainWindow):
-    def __init__(self, model):
+    def __init__(self, ui, model, loader):
         super(vdeh_main_window, self).__init__()
+        # print("preparing ui file")
+        # ui_file = QFile("gui/vdeh_form_lite.ui")
+        # self.ui = loader.load(ui_file)
+        # print("ui loaded")
+        # self.ui.show()
+        # print("ui test")
+        # uic.loadUi("./gui/vdeh_form_lite.ui", self)
 
-        uic.loadUi("./gui/vdeh_form_lite.ui", self)
+        # migrate ui children to parent level of class
+        for att, val in ui.__dict__.items():
+            setattr(self, att, val)
 
         self.setWindowTitle("VevoLab Data Extraction Helper")
 
