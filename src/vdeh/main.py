@@ -58,7 +58,7 @@ requires this behavior)
 """
 
 
-__version__ = "5.4"
+__version__ = "5.4b"
 __license__ = "MIT License"
 __license_text__ = """
 MIT License
@@ -152,29 +152,26 @@ def main():
         pass
     else:
         # create the application
-        print("setting up loader")
-        loader = QUiLoader()
-        print("startup")
-        app = QtWidgets.QApplication(sys.argv)
-        print("app started")
 
-        print("preparing ui file")
+        loader = QUiLoader()
+
+        app = QtWidgets.QApplication(sys.argv)
+
         ui_file = QFile(
             os.path.join(os.path.dirname(__file__), "gui/vdeh_form_lite.ui")
         )
         window_ui = loader.load(ui_file)
-        print("ui loaded")
+
         window_ui.show()
-        print("ui test")
 
         ui = vdeh_controller.vdeh_main_window(window_ui, vdeh_model.vdeh_model, loader)
+
         ui.model.version_info = {
             "VevoLab Data Extraction Helper": __version__,
             "vdeh model": vdeh_model.__component_version__,
             "vdeh gui": vdeh_controller.__component_version__,
             "vdeh subguis": vdeh_subgui_controller.__component_version__,
         }
-        print("ui test - main")
 
         # if user specified --dev or --loglevel update model
         if args.dev:
@@ -186,7 +183,7 @@ def main():
         # MainWindow.show()
         # ui.ui.show()
 
-        sys.exit(app.exec_())
+        sys.exit(app.exec())
 
 
 # %% run main

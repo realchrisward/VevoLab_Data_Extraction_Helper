@@ -1,0 +1,2592 @@
+"FUJIFILM VisualSonics Measurement Export"
+"Institution",""
+"Report Date","9/11/2023"
+
+"Version Information"
+"Company Name","Model","SW Version","SW Build","Report Version"
+"FUJIFILM VisualSonics, Inc.","Vevo LAB","5.7.1","2862","8"
+
+"Study","1"
+"Study Name","050922BaSH"
+"Owner User Name","MMPC"
+"Granting Institution",""
+"Study Date","5/11/2022"
+"Study Time","8:29:41 AM"
+"Study Notes",""
+
+
+"Series Name","Series 1"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","8:29:41 AM"
+"Animal ID","M00695480"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 39","M-Mode","Heart Rate","BPM","520.351526",
+"MAutoLV 39","M-Mode","Temperature","C","36.613318",
+"MAutoLV 39","M-Mode","Diameter;s","mm","2.111427",
+"MAutoLV 39","M-Mode","Diameter;d","mm","3.320406",
+"MAutoLV 39","M-Mode","Volume;s","uL","14.622528",
+"MAutoLV 39","M-Mode","Volume;d","uL","44.809647",
+"MAutoLV 39","M-Mode","Stroke Volume","uL","30.187119",
+"MAutoLV 39","M-Mode","Ejection Fraction","%","67.367455",
+"MAutoLV 39","M-Mode","Fractional Shortening","%","36.410576",
+"MAutoLV 39","M-Mode","Cardiac Output","mL/min","15.707913",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.191552","0.000000","1.191552","1.191552",
+"LVAW;s","M-Mode","Depth","mm","1.553273","3.009123E-02","1.574551","1.531995",
+"LVID;d","M-Mode","Depth","mm","3.266128","0.105319","3.191656","3.340600",
+"LVID;s","M-Mode","Depth","mm","2.234160","0.000000","2.234160","2.234160",
+"LVPW;d","M-Mode","Depth","mm","1.904355","0.135411","2.000105","1.808605",
+"LVPW;s","M-Mode","Depth","mm","1.819244","7.522806E-02","1.766050","1.872438",
+
+Calculation,,Units,
+"EF",,"%",60.865610,
+"FS",,"%",31.596067,
+"LV Mass AW",,"mg",234.465991,
+"LV Mass AW (Corrected)",,"mg",187.572793,
+"LV Vol;d",,"uL",43.043865,
+"LV Vol;s",,"uL",16.844954,
+
+
+
+"Series Name","Series 2"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","8:38:37 AM"
+"Animal ID","M00695481"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 38","M-Mode","Heart Rate","BPM","508.158771",
+"MAutoLV 38","M-Mode","Temperature","C","36.916992",
+"MAutoLV 38","M-Mode","Diameter;s","mm","2.797540",
+"MAutoLV 38","M-Mode","Diameter;d","mm","3.850352",
+"MAutoLV 38","M-Mode","Volume;s","uL","29.488783",
+"MAutoLV 38","M-Mode","Volume;d","uL","63.928720",
+"MAutoLV 38","M-Mode","Stroke Volume","uL","34.439936",
+"MAutoLV 38","M-Mode","Ejection Fraction","%","53.872401",
+"MAutoLV 38","M-Mode","Fractional Shortening","%","27.343276",
+"MAutoLV 38","M-Mode","Cardiac Output","mL/min","17.500956",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.776471","0.000000","0.776471","0.776471",
+"LVAW;s","M-Mode","Depth","mm","1.153922","1.525132E-02","1.143137","1.164706",
+"LVID;d","M-Mode","Depth","mm","3.979412","0.106759","3.903922","4.054902",
+"LVID;s","M-Mode","Depth","mm","2.911765","3.050265E-02","2.933333","2.890196",
+"LVPW;d","M-Mode","Depth","mm","0.733333","3.050265E-02","0.754902","0.711765",
+"LVPW;s","M-Mode","Depth","mm","1.002941","0.076257","1.056863","0.949020",
+
+Calculation,,Units,
+"EF",,"%",52.950605,
+"FS",,"%",26.829265,
+"LV Mass AW",,"mg",107.807631,
+"LV Mass AW (Corrected)",,"mg",86.246105,
+"LV Vol;d",,"uL",69.147121,
+"LV Vol;s",,"uL",32.533302,
+
+
+
+"Series Name","Series 6"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","8:57:10 AM"
+"Animal ID","M00695725"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 34","M-Mode","Heart Rate","BPM","547.070891",
+"MAutoLV 34","M-Mode","Temperature","C","36.503446",
+"MAutoLV 34","M-Mode","Diameter;s","mm","2.152088",
+"MAutoLV 34","M-Mode","Diameter;d","mm","3.270855",
+"MAutoLV 34","M-Mode","Volume;s","uL","15.343829",
+"MAutoLV 34","M-Mode","Volume;d","uL","43.212220",
+"MAutoLV 34","M-Mode","Stroke Volume","uL","27.868390",
+"MAutoLV 34","M-Mode","Ejection Fraction","%","64.491920",
+"MAutoLV 34","M-Mode","Fractional Shortening","%","34.204114",
+"MAutoLV 34","M-Mode","Cardiac Output","mL/min","15.245985",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.078431","6.100529E-02","1.121569","1.035294",
+"LVAW;s","M-Mode","Depth","mm","1.542157","1.525132E-02","1.531373","1.552941",
+"LVID;d","M-Mode","Depth","mm","3.224510","0.106759","3.149020","3.300000",
+"LVID;s","M-Mode","Depth","mm","2.372549","0.000000","2.372549","2.372549",
+"LVPW;d","M-Mode","Depth","mm","0.970588","3.050265E-02","0.949020","0.992157",
+"LVPW;s","M-Mode","Depth","mm","1.272549","3.050265E-02","1.294118","1.250980",
+
+Calculation,,Units,
+"EF",,"%",53.055070,
+"FS",,"%",26.421410,
+"LV Mass AW",,"mg",119.126609,
+"LV Mass AW (Corrected)",,"mg",95.301287,
+"LV Vol;d",,"uL",41.725786,
+"LV Vol;s",,"uL",19.588141,
+
+
+
+"Series Name","Series 3"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","8:41:57 AM"
+"Animal ID","M00695482"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 37","M-Mode","Heart Rate","BPM","462.071621",
+"MAutoLV 37","M-Mode","Temperature","C","37.106216",
+"MAutoLV 37","M-Mode","Diameter;s","mm","2.463950",
+"MAutoLV 37","M-Mode","Diameter;d","mm","3.632458",
+"MAutoLV 37","M-Mode","Volume;s","uL","21.532926",
+"MAutoLV 37","M-Mode","Volume;d","uL","55.638288",
+"MAutoLV 37","M-Mode","Stroke Volume","uL","34.105361",
+"MAutoLV 37","M-Mode","Ejection Fraction","%","61.298366",
+"MAutoLV 37","M-Mode","Fractional Shortening","%","32.168503",
+"MAutoLV 37","M-Mode","Cardiac Output","mL/min","15.759120",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.035294","0.000000","1.035294","1.035294",
+"LVAW;s","M-Mode","Depth","mm","1.445098","3.050265E-02","1.423529","1.466667",
+"LVID;d","M-Mode","Depth","mm","3.580392","3.050265E-02","3.558824","3.601961",
+"LVID;s","M-Mode","Depth","mm","2.350980","0.000000","2.350980","2.350980",
+"LVPW;d","M-Mode","Depth","mm","0.582353","0.000000","0.582353","0.582353",
+"LVPW;s","M-Mode","Depth","mm","1.013725","3.050265E-02","0.992157","1.035294",
+
+Calculation,,Units,
+"EF",,"%",64.362969,
+"FS",,"%",34.337357,
+"LV Mass AW",,"mg",99.562411,
+"LV Mass AW (Corrected)",,"mg",79.649929,
+"LV Vol;d",,"uL",53.722983,
+"LV Vol;s",,"uL",19.145276,
+
+
+
+"Series Name","Series 4"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","8:46:39 AM"
+"Animal ID","M00695483"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 36","M-Mode","Heart Rate","BPM","524.498448",
+"MAutoLV 36","M-Mode","Temperature","C","37.243556",
+"MAutoLV 36","M-Mode","Diameter;s","mm","1.412390",
+"MAutoLV 36","M-Mode","Diameter;d","mm","2.648290",
+"MAutoLV 36","M-Mode","Volume;s","uL","5.176926",
+"MAutoLV 36","M-Mode","Volume;d","uL","25.762367",
+"MAutoLV 36","M-Mode","Stroke Volume","uL","20.585440",
+"MAutoLV 36","M-Mode","Ejection Fraction","%","79.905082",
+"MAutoLV 36","M-Mode","Fractional Shortening","%","46.667832",
+"MAutoLV 36","M-Mode","Cardiac Output","mL/min","10.797031",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.207843","0.000000","1.207843","1.207843",
+"LVAW;s","M-Mode","Depth","mm","1.671569","1.525132E-02","1.682353","1.660784",
+"LVID;d","M-Mode","Depth","mm","2.555882","0.015251","2.545098","2.566667",
+"LVID;s","M-Mode","Depth","mm","1.445098","6.100529E-02","1.488235","1.401961",
+"LVPW;d","M-Mode","Depth","mm","0.830392","7.625661E-02","0.884314","0.776471",
+"LVPW;s","M-Mode","Depth","mm","1.229412","0.091508","1.164706","1.294118",
+
+Calculation,,Units,
+"EF",,"%",76.703911,
+"FS",,"%",43.459909,
+"LV Mass AW",,"mg",84.520774,
+"LV Mass AW (Corrected)",,"mg",67.616619,
+"LV Vol;d",,"uL",23.583023,
+"LV Vol;s",,"uL",5.493922,
+
+
+
+"Series Name","Series 5"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","8:50:59 AM"
+"Animal ID","M00695484"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 35","M-Mode","Heart Rate","BPM","536.984830",
+"MAutoLV 35","M-Mode","Temperature","C","37.351902",
+"MAutoLV 35","M-Mode","Diameter;s","mm","1.843584",
+"MAutoLV 35","M-Mode","Diameter;d","mm","2.976349",
+"MAutoLV 35","M-Mode","Volume;s","uL","10.337323",
+"MAutoLV 35","M-Mode","Volume;d","uL","34.332733",
+"MAutoLV 35","M-Mode","Stroke Volume","uL","23.995410",
+"MAutoLV 35","M-Mode","Ejection Fraction","%","69.890765",
+"MAutoLV 35","M-Mode","Fractional Shortening","%","38.058881",
+"MAutoLV 35","M-Mode","Cardiac Output","mL/min","12.885171",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.132353","4.575397E-02","1.164706","1.100000",
+"LVAW;s","M-Mode","Depth","mm","1.693137","1.525132E-02","1.682353","1.703922",
+"LVID;d","M-Mode","Depth","mm","2.750000","0.015251","2.739216","2.760784",
+"LVID;s","M-Mode","Depth","mm","1.779412","1.525132E-02","1.790196","1.768627",
+"LVPW;d","M-Mode","Depth","mm","1.197059","1.525132E-02","1.207843","1.186275",
+"LVPW;s","M-Mode","Depth","mm","1.477451","4.575397E-02","1.445098","1.509804",
+
+Calculation,,Units,
+"EF",,"%",66.617141,
+"FS",,"%",35.294109,
+"LV Mass AW",,"mg",116.097588,
+"LV Mass AW (Corrected)",,"mg",92.878070,
+"LV Vol;d",,"uL",28.267597,
+"LV Vol;s",,"uL",9.436532,
+
+
+
+"Series Name","Series 7"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:02:58 AM"
+"Animal ID","M00695727"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 33","M-Mode","Heart Rate","BPM","582.618547",
+"MAutoLV 33","M-Mode","Temperature","C","37.313752",
+"MAutoLV 33","M-Mode","Diameter;s","mm","2.265490",
+"MAutoLV 33","M-Mode","Diameter;d","mm","3.156276",
+"MAutoLV 33","M-Mode","Volume;s","uL","17.456861",
+"MAutoLV 33","M-Mode","Volume;d","uL","39.642790",
+"MAutoLV 33","M-Mode","Stroke Volume","uL","22.185929",
+"MAutoLV 33","M-Mode","Ejection Fraction","%","55.964601",
+"MAutoLV 33","M-Mode","Fractional Shortening","%","28.222677",
+"MAutoLV 33","M-Mode","Cardiac Output","mL/min","12.925934",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.078431","6.100529E-02","1.035294","1.121569",
+"LVAW;s","M-Mode","Depth","mm","1.369608","4.575397E-02","1.401961","1.337255",
+"LVID;d","M-Mode","Depth","mm","3.105882","3.050265E-02","3.127451","3.084314",
+"LVID;s","M-Mode","Depth","mm","2.275490","1.525132E-02","2.264706","2.286275",
+"LVPW;d","M-Mode","Depth","mm","0.905882","3.050265E-02","0.884314","0.927451",
+"LVPW;s","M-Mode","Depth","mm","1.164706","0.000000","1.164706","1.164706",
+
+Calculation,,Units,
+"EF",,"%",53.690542,
+"FS",,"%",26.736109,
+"LV Mass AW",,"mg",107.328590,
+"LV Mass AW (Corrected)",,"mg",85.862872,
+"LV Vol;d",,"uL",38.091318,
+"LV Vol;s",,"uL",17.639883,
+
+
+
+"Series Name","Series 8"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:06:27 AM"
+"Animal ID","M00695728"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 32","M-Mode","Heart Rate","BPM","481.283422",
+"MAutoLV 32","M-Mode","Temperature","C","37.278654",
+"MAutoLV 32","M-Mode","Diameter;s","mm","3.123406",
+"MAutoLV 32","M-Mode","Diameter;d","mm","3.912959",
+"MAutoLV 32","M-Mode","Volume;s","uL","38.617003",
+"MAutoLV 32","M-Mode","Volume;d","uL","66.433060",
+"MAutoLV 32","M-Mode","Stroke Volume","uL","27.816057",
+"MAutoLV 32","M-Mode","Ejection Fraction","%","41.870806",
+"MAutoLV 32","M-Mode","Fractional Shortening","%","20.177904",
+"MAutoLV 32","M-Mode","Cardiac Output","mL/min","13.387407",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.798039","3.050265E-02","0.776471","0.819608",
+"LVAW;s","M-Mode","Depth","mm","1.121569","0.061005","1.078431","1.164706",
+"LVID;d","M-Mode","Depth","mm","3.817647","3.050265E-02","3.796078","3.839216",
+"LVID;s","M-Mode","Depth","mm","2.987255","4.575397E-02","3.019608","2.954902",
+"LVPW;d","M-Mode","Depth","mm","1.110784","4.575397E-02","1.143137","1.078431",
+"LVPW;s","M-Mode","Depth","mm","1.218627","4.575397E-02","1.186275","1.250980",
+
+Calculation,,Units,
+"EF",,"%",44.704714,
+"FS",,"%",21.751409,
+"LV Mass AW",,"mg",139.148692,
+"LV Mass AW (Corrected)",,"mg",111.318954,
+"LV Vol;d",,"uL",62.641087,
+"LV Vol;s",,"uL",34.637568,
+
+
+
+"Series Name","Series 31"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:38:43 AM"
+"Animal ID","M00695643"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 7","M-Mode","Heart Rate","BPM","462.594125",
+"MAutoLV 7","M-Mode","Temperature","C","37.377844",
+"MAutoLV 7","M-Mode","Diameter;s","mm","3.516819",
+"MAutoLV 7","M-Mode","Diameter;d","mm","4.573192",
+"MAutoLV 7","M-Mode","Volume;s","uL","51.477709",
+"MAutoLV 7","M-Mode","Volume;d","uL","96.015613",
+"MAutoLV 7","M-Mode","Stroke Volume","uL","44.537904",
+"MAutoLV 7","M-Mode","Ejection Fraction","%","46.386106",
+"MAutoLV 7","M-Mode","Fractional Shortening","%","23.099260",
+"MAutoLV 7","M-Mode","Cardiac Output","mL/min","20.602973",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.078431","3.050265E-02","1.056863","1.100000",
+"LVAW;s","M-Mode","Depth","mm","1.401961","9.150794E-02","1.466667","1.337255",
+"LVID;d","M-Mode","Depth","mm","4.378431","0.030503","4.400000","4.356863",
+"LVID;s","M-Mode","Depth","mm","3.504902","1.525132E-02","3.494118","3.515686",
+"LVPW;d","M-Mode","Depth","mm","0.819608","3.050265E-02","0.841176","0.798039",
+"LVPW;s","M-Mode","Depth","mm","1.024510","1.525132E-02","1.013725","1.035294",
+
+Calculation,,Units,
+"EF",,"%",41.117181,
+"FS",,"%",19.950731,
+"LV Mass AW",,"mg",171.974202,
+"LV Mass AW (Corrected)",,"mg",137.579362,
+"LV Vol;d",,"uL",86.681095,
+"LV Vol;s",,"uL",51.040272,
+
+
+
+"Series Name","Series 21"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","9:38:50 AM"
+"Animal ID","M00696191"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 18","M-Mode","Heart Rate","BPM","517.806801",
+"MAutoLV 18","M-Mode","Temperature","C","37.466352",
+"MAutoLV 18","M-Mode","Diameter;s","mm","2.440518",
+"MAutoLV 18","M-Mode","Diameter;d","mm","3.244769",
+"MAutoLV 18","M-Mode","Volume;s","uL","21.065620",
+"MAutoLV 18","M-Mode","Volume;d","uL","42.403451",
+"MAutoLV 18","M-Mode","Stroke Volume","uL","21.337831",
+"MAutoLV 18","M-Mode","Ejection Fraction","%","50.320978",
+"MAutoLV 18","M-Mode","Fractional Shortening","%","24.786068",
+"MAutoLV 18","M-Mode","Cardiac Output","mL/min","11.048874",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.722549","1.525132E-02","0.711765","0.733333",
+"LVAW;s","M-Mode","Depth","mm","1.143137","0.000000","1.143137","1.143137",
+"LVID;d","M-Mode","Depth","mm","3.073529","4.575397E-02","3.105882","3.041176",
+"LVID;s","M-Mode","Depth","mm","2.210784","1.525132E-02","2.200000","2.221569",
+"LVPW;d","M-Mode","Depth","mm","0.905882","9.150794E-02","0.841176","0.970588",
+"LVPW;s","M-Mode","Depth","mm","1.283333","1.525132E-02","1.294118","1.272549",
+
+Calculation,,Units,
+"EF",,"%",55.820618,
+"FS",,"%",28.070176,
+"LV Mass AW",,"mg",78.889290,
+"LV Mass AW (Corrected)",,"mg",63.111432,
+"LV Vol;d",,"uL",37.131506,
+"LV Vol;s",,"uL",16.404470,
+
+
+
+"Series Name","Series 9"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:13:03 AM"
+"Animal ID","M00696255"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 31","M-Mode","Heart Rate","BPM","398.300584",
+"MAutoLV 31","M-Mode","Temperature","C","36.643838",
+"MAutoLV 31","M-Mode","Diameter;s","mm","3.012965",
+"MAutoLV 31","M-Mode","Diameter;d","mm","3.866505",
+"MAutoLV 31","M-Mode","Volume;s","uL","35.411093",
+"MAutoLV 31","M-Mode","Volume;d","uL","64.623389",
+"MAutoLV 31","M-Mode","Stroke Volume","uL","29.212297",
+"MAutoLV 31","M-Mode","Ejection Fraction","%","45.203907",
+"MAutoLV 31","M-Mode","Fractional Shortening","%","22.075234",
+"MAutoLV 31","M-Mode","Cardiac Output","mL/min","11.635275",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.776471","0.000000","0.776471","0.776471",
+"LVAW;s","M-Mode","Depth","mm","1.024510","1.525132E-02","1.013725","1.035294",
+"LVID;d","M-Mode","Depth","mm","3.806863","0.106759","3.882353","3.731373",
+"LVID;s","M-Mode","Depth","mm","3.062745","9.150794E-02","3.127451","2.998039",
+"LVPW;d","M-Mode","Depth","mm","0.819608","6.100529E-02","0.776471","0.862745",
+"LVPW;s","M-Mode","Depth","mm","1.089216","7.625661E-02","1.035294","1.143137",
+
+Calculation,,Units,
+"EF",,"%",40.831304,
+"FS",,"%",19.546750,
+"LV Mass AW",,"mg",107.986902,
+"LV Mass AW (Corrected)",,"mg",86.389522,
+"LV Vol;d",,"uL",62.219659,
+"LV Vol;s",,"uL",36.814561,
+
+
+
+"Series Name","Series 10"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:17:19 AM"
+"Animal ID","M00696256"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 30","M-Mode","Heart Rate","BPM","496.124031",
+"MAutoLV 30","M-Mode","Temperature","C","37.266446",
+"MAutoLV 30","M-Mode","Diameter;s","mm","3.036470",
+"MAutoLV 30","M-Mode","Diameter;d","mm","3.786301",
+"MAutoLV 30","M-Mode","Volume;s","uL","36.062868",
+"MAutoLV 30","M-Mode","Volume;d","uL","61.459158",
+"MAutoLV 30","M-Mode","Stroke Volume","uL","25.396289",
+"MAutoLV 30","M-Mode","Ejection Fraction","%","41.322222",
+"MAutoLV 30","M-Mode","Fractional Shortening","%","19.803773",
+"MAutoLV 30","M-Mode","Cardiac Output","mL/min","12.599709",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.884314","3.050265E-02","0.905882","0.862745",
+"LVAW;s","M-Mode","Depth","mm","1.207843","3.050265E-02","1.186275","1.229412",
+"LVID;d","M-Mode","Depth","mm","3.731373","0.000000","3.731373","3.731373",
+"LVID;s","M-Mode","Depth","mm","3.041176","9.150794E-02","3.105882","2.976471",
+"LVPW;d","M-Mode","Depth","mm","0.841176","0.000000","0.841176","0.841176",
+"LVPW;s","M-Mode","Depth","mm","0.970588","3.050265E-02","0.992157","0.949020",
+
+Calculation,,Units,
+"EF",,"%",38.992443,
+"FS",,"%",18.497132,
+"LV Mass AW",,"mg",116.397035,
+"LV Mass AW (Corrected)",,"mg",93.117628,
+"LV Vol;d",,"uL",59.312509,
+"LV Vol;s",,"uL",36.185113,
+
+
+
+"Series Name","Series 34"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:52:45 AM"
+"Animal ID","M00695733"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 4","M-Mode","Heart Rate","BPM","413.602941",
+"MAutoLV 4","M-Mode","Temperature","C","36.707930",
+"MAutoLV 4","M-Mode","Diameter;s","mm","3.482824",
+"MAutoLV 4","M-Mode","Diameter;d","mm","4.407000",
+"MAutoLV 4","M-Mode","Volume;s","uL","50.319924",
+"MAutoLV 4","M-Mode","Volume;d","uL","88.041237",
+"MAutoLV 4","M-Mode","Stroke Volume","uL","37.721313",
+"MAutoLV 4","M-Mode","Ejection Fraction","%","42.845051",
+"MAutoLV 4","M-Mode","Fractional Shortening","%","20.970646",
+"MAutoLV 4","M-Mode","Cardiac Output","mL/min","15.601646",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.765686","4.575397E-02","0.733333","0.798039",
+"LVAW;s","M-Mode","Depth","mm","1.175490","0.076257","1.229412","1.121569",
+"LVID;d","M-Mode","Depth","mm","4.518627","4.575397E-02","4.550980","4.486275",
+"LVID;s","M-Mode","Depth","mm","3.537255","0.122011","3.450980","3.623529",
+"LVPW;d","M-Mode","Depth","mm","1.315686","0.000000","1.315686","1.315686",
+"LVPW;s","M-Mode","Depth","mm","1.552941","6.100529E-02","1.596078","1.509804",
+
+Calculation,,Units,
+"EF",,"%",44.099737,
+"FS",,"%",21.718367,
+"LV Mass AW",,"mg",205.582022,
+"LV Mass AW (Corrected)",,"mg",164.465618,
+"LV Vol;d",,"uL",93.346406,
+"LV Vol;s",,"uL",52.180886,
+
+
+
+"Series Name","Series 11"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:21:55 AM"
+"Animal ID","M00696250"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 29","M-Mode","Heart Rate","BPM","484.515530",
+"MAutoLV 29","M-Mode","Temperature","C","37.266446",
+"MAutoLV 29","M-Mode","Diameter;s","mm","2.251316",
+"MAutoLV 29","M-Mode","Diameter;d","mm","3.258666",
+"MAutoLV 29","M-Mode","Volume;s","uL","17.178077",
+"MAutoLV 29","M-Mode","Volume;d","uL","42.856780",
+"MAutoLV 29","M-Mode","Stroke Volume","uL","25.678702",
+"MAutoLV 29","M-Mode","Ejection Fraction","%","59.917480",
+"MAutoLV 29","M-Mode","Fractional Shortening","%","30.912965",
+"MAutoLV 29","M-Mode","Cardiac Output","mL/min","12.441730",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.841176","0.000000","0.841176","0.841176",
+"LVAW;s","M-Mode","Depth","mm","1.164706","0.000000","1.164706","1.164706",
+"LVID;d","M-Mode","Depth","mm","3.440196","1.525132E-02","3.429412","3.450980",
+"LVID;s","M-Mode","Depth","mm","2.458824","0.000000","2.458824","2.458824",
+"LVPW;d","M-Mode","Depth","mm","0.614706","7.625661E-02","0.668627","0.560784",
+"LVPW;s","M-Mode","Depth","mm","0.970588","0.000000","0.970588","0.970588",
+
+Calculation,,Units,
+"EF",,"%",56.113694,
+"FS",,"%",28.526630,
+"LV Mass AW",,"mg",80.714747,
+"LV Mass AW (Corrected)",,"mg",64.571798,
+"LV Vol;d",,"uL",48.800040,
+"LV Vol;s",,"uL",21.416535,
+
+
+
+"Series Name","Series 14"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:41:49 AM"
+"Animal ID","M00695290"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 26","M-Mode","Heart Rate","BPM","484.535250",
+"MAutoLV 26","M-Mode","Temperature","C","36.593480",
+"MAutoLV 26","M-Mode","Diameter;s","mm","2.227022",
+"MAutoLV 26","M-Mode","Diameter;d","mm","3.174824",
+"MAutoLV 26","M-Mode","Volume;s","uL","16.756116",
+"MAutoLV 26","M-Mode","Volume;d","uL","40.239168",
+"MAutoLV 26","M-Mode","Stroke Volume","uL","23.483052",
+"MAutoLV 26","M-Mode","Ejection Fraction","%","58.358692",
+"MAutoLV 26","M-Mode","Fractional Shortening","%","29.853708",
+"MAutoLV 26","M-Mode","Cardiac Output","mL/min","11.378367",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.121569","3.050265E-02","1.100000","1.143137",
+"LVAW;s","M-Mode","Depth","mm","1.455882","1.525132E-02","1.466667","1.445098",
+"LVID;d","M-Mode","Depth","mm","3.235294","9.150794E-02","3.300000","3.170588",
+"LVID;s","M-Mode","Depth","mm","2.426471","4.575397E-02","2.394118","2.458824",
+"LVPW;d","M-Mode","Depth","mm","1.229412","3.050265E-02","1.207843","1.250980",
+"LVPW;s","M-Mode","Depth","mm","1.380392","3.050265E-02","1.401961","1.358824",
+
+Calculation,,Units,
+"EF",,"%",50.742663,
+"FS",,"%",24.999985,
+"LV Mass AW",,"mg",147.908255,
+"LV Mass AW (Corrected)",,"mg",118.326604,
+"LV Vol;d",,"uL",42.065177,
+"LV Vol;s",,"uL",20.720186,
+
+
+
+"Series Name","Series 12"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:25:52 AM"
+"Animal ID","M00695749"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 28","M-Mode","Heart Rate","BPM","510.493477",
+"MAutoLV 28","M-Mode","Temperature","C","36.501920",
+"MAutoLV 28","M-Mode","Diameter;s","mm","3.401867",
+"MAutoLV 28","M-Mode","Diameter;d","mm","4.501020",
+"MAutoLV 28","M-Mode","Volume;s","uL","47.504137",
+"MAutoLV 28","M-Mode","Volume;d","uL","92.503577",
+"MAutoLV 28","M-Mode","Stroke Volume","uL","44.999441",
+"MAutoLV 28","M-Mode","Ejection Fraction","%","48.646163",
+"MAutoLV 28","M-Mode","Fractional Shortening","%","24.420096",
+"MAutoLV 28","M-Mode","Cardiac Output","mL/min","22.971921",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.013725","9.150794E-02","1.078431","0.949020",
+"LVAW;s","M-Mode","Depth","mm","1.380392","3.050265E-02","1.358824","1.401961",
+"LVID;d","M-Mode","Depth","mm","4.497059","1.525132E-02","4.486275","4.507843",
+"LVID;s","M-Mode","Depth","mm","3.267647","4.575397E-02","3.300000","3.235294",
+"LVPW;d","M-Mode","Depth","mm","0.711765","3.050265E-02","0.733333","0.690196",
+"LVPW;s","M-Mode","Depth","mm","1.100000","3.050265E-02","1.121569","1.078431",
+
+Calculation,,Units,
+"EF",,"%",53.314631,
+"FS",,"%",27.338134,
+"LV Mass AW",,"mg",157.940911,
+"LV Mass AW (Corrected)",,"mg",126.352729,
+"LV Vol;d",,"uL",92.303858,
+"LV Vol;s",,"uL",43.092397,
+
+
+
+"Series Name","Series 19"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","10:06:46 AM"
+"Animal ID","M00696194"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 20","M-Mode","Heart Rate","BPM","446.871897",
+"MAutoLV 20","M-Mode","Temperature","C","37.176412",
+"MAutoLV 20","M-Mode","Diameter;s","mm","2.524759",
+"MAutoLV 20","M-Mode","Diameter;d","mm","3.355587",
+"MAutoLV 20","M-Mode","Volume;s","uL","22.932356",
+"MAutoLV 20","M-Mode","Volume;d","uL","45.960630",
+"MAutoLV 20","M-Mode","Stroke Volume","uL","23.028274",
+"MAutoLV 20","M-Mode","Ejection Fraction","%","50.104348",
+"MAutoLV 20","M-Mode","Fractional Shortening","%","24.759547",
+"MAutoLV 20","M-Mode","Cardiac Output","mL/min","10.290688",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.905882","6.100529E-02","0.862745","0.949020",
+"LVAW;s","M-Mode","Depth","mm","1.175490","1.525132E-02","1.164706","1.186275",
+"LVID;d","M-Mode","Depth","mm","3.213725","0.061005","3.256863","3.170588",
+"LVID;s","M-Mode","Depth","mm","2.361765","1.525132E-02","2.350980","2.372549",
+"LVPW;d","M-Mode","Depth","mm","1.660784","3.050265E-02","1.682353","1.639216",
+"LVPW;s","M-Mode","Depth","mm","1.833333","3.050265E-02","1.854902","1.811765",
+
+Calculation,,Units,
+"EF",,"%",53.208487,
+"FS",,"%",26.510047,
+"LV Mass AW",,"mg",168.425560,
+"LV Mass AW (Corrected)",,"mg",134.740448,
+"LV Vol;d",,"uL",41.387867,
+"LV Vol;s",,"uL",19.366009,
+
+
+
+"Series Name","Series 18"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","10:03:12 AM"
+"Animal ID","M00696186"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 21","M-Mode","Heart Rate","BPM","440.601421",
+"MAutoLV 21","M-Mode","Temperature","C","36.694196",
+"MAutoLV 21","M-Mode","Diameter;s","mm","2.895372",
+"MAutoLV 21","M-Mode","Diameter;d","mm","3.645441",
+"MAutoLV 21","M-Mode","Volume;s","uL","32.177558",
+"MAutoLV 21","M-Mode","Volume;d","uL","56.259852",
+"MAutoLV 21","M-Mode","Stroke Volume","uL","24.082295",
+"MAutoLV 21","M-Mode","Ejection Fraction","%","42.805471",
+"MAutoLV 21","M-Mode","Fractional Shortening","%","20.575544",
+"MAutoLV 21","M-Mode","Cardiac Output","mL/min","10.610693",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.841176","3.050265E-02","0.819608","0.862745",
+"LVAW;s","M-Mode","Depth","mm","1.229412","3.050265E-02","1.250980","1.207843",
+"LVID;d","M-Mode","Depth","mm","3.601961","6.100529E-02","3.645098","3.558824",
+"LVID;s","M-Mode","Depth","mm","2.803922","3.050265E-02","2.782353","2.825490",
+"LVPW;d","M-Mode","Depth","mm","1.024510","4.575397E-02","1.056863","0.992157",
+"LVPW;s","M-Mode","Depth","mm","1.153922","1.525132E-02","1.164706","1.143137",
+
+Calculation,,Units,
+"EF",,"%",45.594456,
+"FS",,"%",22.155681,
+"LV Mass AW",,"mg",122.910285,
+"LV Mass AW (Corrected)",,"mg",98.328228,
+"LV Vol;d",,"uL",54.503186,
+"LV Vol;s",,"uL",29.652755,
+
+
+
+"Series Name","Series 13"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:34:40 AM"
+"Animal ID","M00695751"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 27","M-Mode","Heart Rate","BPM","566.893424",
+"MAutoLV 27","M-Mode","Temperature","C","37.098586",
+"MAutoLV 27","M-Mode","Diameter;s","mm","3.048055",
+"MAutoLV 27","M-Mode","Diameter;d","mm","3.873946",
+"MAutoLV 27","M-Mode","Volume;s","uL","36.386383",
+"MAutoLV 27","M-Mode","Volume;d","uL","64.873411",
+"MAutoLV 27","M-Mode","Stroke Volume","uL","28.487028",
+"MAutoLV 27","M-Mode","Ejection Fraction","%","43.911716",
+"MAutoLV 27","M-Mode","Fractional Shortening","%","21.319100",
+"MAutoLV 27","M-Mode","Cardiac Output","mL/min","16.149109",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.143137","6.100529E-02","1.186275","1.100000",
+"LVAW;s","M-Mode","Depth","mm","1.520588","1.525132E-02","1.531373","1.509804",
+"LVID;d","M-Mode","Depth","mm","3.817647","0.000000","3.817647","3.817647",
+"LVID;s","M-Mode","Depth","mm","2.900980","1.525132E-02","2.911765","2.890196",
+"LVPW;d","M-Mode","Depth","mm","1.164706","3.050265E-02","1.143137","1.186275",
+"LVPW;s","M-Mode","Depth","mm","1.412745","1.525132E-02","1.423529","1.401961",
+
+Calculation,,Units,
+"EF",,"%",48.534429,
+"FS",,"%",24.011309,
+"LV Mass AW",,"mg",183.430843,
+"LV Mass AW (Corrected)",,"mg",146.744674,
+"LV Vol;d",,"uL",62.641087,
+"LV Vol;s",,"uL",32.238593,
+
+
+
+"Series Name","Series 15"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:47:16 AM"
+"Animal ID","M00695292"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 25","M-Mode","Heart Rate","BPM","507.399577",
+"MAutoLV 25","M-Mode","Temperature","C","37.284758",
+"MAutoLV 25","M-Mode","Diameter;s","mm","2.508994",
+"MAutoLV 25","M-Mode","Diameter;d","mm","3.570254",
+"MAutoLV 25","M-Mode","Volume;s","uL","22.555123",
+"MAutoLV 25","M-Mode","Volume;d","uL","53.377766",
+"MAutoLV 25","M-Mode","Stroke Volume","uL","30.822643",
+"MAutoLV 25","M-Mode","Ejection Fraction","%","57.744348",
+"MAutoLV 25","M-Mode","Fractional Shortening","%","29.725045",
+"MAutoLV 25","M-Mode","Cardiac Output","mL/min","15.639396",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.970588","6.100529E-02","0.927451","1.013725",
+"LVAW;s","M-Mode","Depth","mm","1.434314","4.575397E-02","1.466667","1.401961",
+"LVID;d","M-Mode","Depth","mm","3.472549","0.030503","3.494118","3.450980",
+"LVID;s","M-Mode","Depth","mm","2.361765","4.575397E-02","2.394118","2.329412",
+"LVPW;d","M-Mode","Depth","mm","0.722549","1.525132E-02","0.733333","0.711765",
+"LVPW;s","M-Mode","Depth","mm","1.110784","1.525132E-02","1.100000","1.121569",
+
+Calculation,,Units,
+"EF",,"%",61.200727,
+"FS",,"%",31.987569,
+"LV Mass AW",,"mg",101.055050,
+"LV Mass AW (Corrected)",,"mg",80.844040,
+"LV Vol;d",,"uL",49.913329,
+"LV Vol;s",,"uL",19.366009,
+
+
+
+"Series Name","Series 16"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:56:13 AM"
+"Animal ID","M00695286"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 23","M-Mode","Heart Rate","BPM","417.924309",
+"MAutoLV 23","M-Mode","Temperature","C","36.810172",
+"MAutoLV 23","M-Mode","Diameter;s","mm","3.190268",
+"MAutoLV 23","M-Mode","Diameter;d","mm","4.019995",
+"MAutoLV 23","M-Mode","Volume;s","uL","40.677603",
+"MAutoLV 23","M-Mode","Volume;d","uL","70.846772",
+"MAutoLV 23","M-Mode","Stroke Volume","uL","30.169169",
+"MAutoLV 23","M-Mode","Ejection Fraction","%","42.583689",
+"MAutoLV 23","M-Mode","Fractional Shortening","%","20.639992",
+"MAutoLV 23","M-Mode","Cardiac Output","mL/min","12.608429",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.013725","3.050265E-02","1.035294","0.992157",
+"LVAW;s","M-Mode","Depth","mm","1.337255","0.000000","1.337255","1.337255",
+"LVID;d","M-Mode","Depth","mm","4.130392","1.525132E-02","4.119608","4.141176",
+"LVID;s","M-Mode","Depth","mm","3.170588","3.050265E-02","3.149020","3.192157",
+"LVPW;d","M-Mode","Depth","mm","0.873529","1.525132E-02","0.862745","0.884314",
+"LVPW;s","M-Mode","Depth","mm","1.294118","0.091508","1.358824","1.229412",
+
+Calculation,,Units,
+"EF",,"%",46.974615,
+"FS",,"%",23.237601,
+"LV Mass AW",,"mg",155.260976,
+"LV Mass AW (Corrected)",,"mg",124.208781,
+"LV Vol;d",,"uL",75.532281,
+"LV Vol;s",,"uL",40.051283,
+
+
+
+"Series Name","Series 17"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/11/2022"
+"Series Time","9:59:01 AM"
+"Animal ID","M00695289"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 22","M-Mode","Heart Rate","BPM","437.530384",
+"MAutoLV 22","M-Mode","Temperature","C","36.915466",
+"MAutoLV 22","M-Mode","Diameter;s","mm","3.148645",
+"MAutoLV 22","M-Mode","Diameter;d","mm","4.117042",
+"MAutoLV 22","M-Mode","Volume;s","uL","39.389483",
+"MAutoLV 22","M-Mode","Volume;d","uL","74.958300",
+"MAutoLV 22","M-Mode","Stroke Volume","uL","35.568816",
+"MAutoLV 22","M-Mode","Ejection Fraction","%","47.451472",
+"MAutoLV 22","M-Mode","Fractional Shortening","%","23.521668",
+"MAutoLV 22","M-Mode","Cardiac Output","mL/min","15.562438",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.002941","4.575397E-02","0.970588","1.035294",
+"LVAW;s","M-Mode","Depth","mm","1.272549","3.050265E-02","1.294118","1.250980",
+"LVID;d","M-Mode","Depth","mm","4.184314","0.000000","4.184314","4.184314",
+"LVID;s","M-Mode","Depth","mm","3.159804","1.525132E-02","3.170588","3.149020",
+"LVPW;d","M-Mode","Depth","mm","0.949020","0.000000","0.949020","0.949020",
+"LVPW;s","M-Mode","Depth","mm","1.240196","1.525132E-02","1.250980","1.229412",
+
+Calculation,,Units,
+"EF",,"%",49.001350,
+"FS",,"%",24.484539,
+"LV Mass AW",,"mg",166.156569,
+"LV Mass AW (Corrected)",,"mg",132.925255,
+"LV Vol;d",,"uL",77.886163,
+"LV Vol;s",,"uL",39.720892,
+
+
+
+"Series Name","Series 20"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","9:33:00 AM"
+"Animal ID","M00696190"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 19","M-Mode","Heart Rate","BPM","606.869766",
+"MAutoLV 19","M-Mode","Temperature","C","37.209984",
+"MAutoLV 19","M-Mode","Diameter;s","mm","1.921899",
+"MAutoLV 19","M-Mode","Diameter;d","mm","2.893386",
+"MAutoLV 19","M-Mode","Volume;s","uL","11.516855",
+"MAutoLV 19","M-Mode","Volume;d","uL","32.052978",
+"MAutoLV 19","M-Mode","Stroke Volume","uL","20.536123",
+"MAutoLV 19","M-Mode","Ejection Fraction","%","64.069314",
+"MAutoLV 19","M-Mode","Fractional Shortening","%","33.576119",
+"MAutoLV 19","M-Mode","Cardiac Output","mL/min","12.462752",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.938235","1.525132E-02","0.927451","0.949020",
+"LVAW;s","M-Mode","Depth","mm","1.477451","0.106759","1.401961","1.552941",
+"LVID;d","M-Mode","Depth","mm","3.073529","1.525132E-02","3.062745","3.084314",
+"LVID;s","M-Mode","Depth","mm","2.135294","0.152513","2.243137","2.027451",
+"LVPW;d","M-Mode","Depth","mm","0.949020","3.050265E-02","0.927451","0.970588",
+"LVPW;s","M-Mode","Depth","mm","1.358824","0.000000","1.358824","1.358824",
+
+Calculation,,Units,
+"EF",,"%",59.530944,
+"FS",,"%",30.526310,
+"LV Mass AW",,"mg",97.978985,
+"LV Mass AW (Corrected)",,"mg",78.383188,
+"LV Vol;d",,"uL",37.131506,
+"LV Vol;s",,"uL",15.026770,
+
+
+
+"Series Name","Series 22"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","9:44:21 AM"
+"Animal ID","M00696240"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 17","M-Mode","Heart Rate","BPM","520.351526",
+"MAutoLV 17","M-Mode","Temperature","C","36.598058",
+"MAutoLV 17","M-Mode","Diameter;s","mm","1.796311",
+"MAutoLV 17","M-Mode","Diameter;d","mm","3.170394",
+"MAutoLV 17","M-Mode","Volume;s","uL","9.670569",
+"MAutoLV 17","M-Mode","Volume;d","uL","40.050221",
+"MAutoLV 17","M-Mode","Stroke Volume","uL","30.379653",
+"MAutoLV 17","M-Mode","Ejection Fraction","%","75.853895",
+"MAutoLV 17","M-Mode","Fractional Shortening","%","43.341100",
+"MAutoLV 17","M-Mode","Cardiac Output","mL/min","15.808099",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.067647","1.525132E-02","1.056863","1.078431",
+"LVAW;s","M-Mode","Depth","mm","1.488235","0.091508","1.423529","1.552941",
+"LVID;d","M-Mode","Depth","mm","3.149020","9.150794E-02","3.084314","3.213725",
+"LVID;s","M-Mode","Depth","mm","1.844118","1.525132E-02","1.833333","1.854902",
+"LVPW;d","M-Mode","Depth","mm","0.787255","4.575397E-02","0.819608","0.754902",
+"LVPW;s","M-Mode","Depth","mm","1.412745","7.625661E-02","1.358824","1.466667",
+
+Calculation,,Units,
+"EF",,"%",73.741573,
+"FS",,"%",41.438352,
+"LV Mass AW",,"mg",99.053255,
+"LV Mass AW (Corrected)",,"mg",79.242604,
+"LV Vol;d",,"uL",39.391998,
+"LV Vol;s",,"uL",10.343719,
+
+
+
+"Series Name","Series 23"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","9:50:46 AM"
+"Animal ID","M00696244"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 16","M-Mode","Heart Rate","BPM","526.008182",
+"MAutoLV 16","M-Mode","Temperature","C","37.411416",
+"MAutoLV 16","M-Mode","Diameter;s","mm","1.668979",
+"MAutoLV 16","M-Mode","Diameter;d","mm","2.968482",
+"MAutoLV 16","M-Mode","Volume;s","uL","8.068397",
+"MAutoLV 16","M-Mode","Volume;d","uL","34.210179",
+"MAutoLV 16","M-Mode","Stroke Volume","uL","26.141782",
+"MAutoLV 16","M-Mode","Ejection Fraction","%","76.415215",
+"MAutoLV 16","M-Mode","Fractional Shortening","%","43.776682",
+"MAutoLV 16","M-Mode","Cardiac Output","mL/min","13.750791",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.024510","1.525132E-02","1.013725","1.035294",
+"LVAW;s","M-Mode","Depth","mm","1.714706","0.106759","1.639216","1.790196",
+"LVID;d","M-Mode","Depth","mm","3.246078","7.625661E-02","3.300000","3.192157",
+"LVID;s","M-Mode","Depth","mm","1.682353","0.091508","1.747059","1.617647",
+"LVPW;d","M-Mode","Depth","mm","0.798039","6.100529E-02","0.754902","0.841176",
+"LVPW;s","M-Mode","Depth","mm","1.606863","7.625661E-02","1.552941","1.660784",
+
+Calculation,,Units,
+"EF",,"%",80.746449,
+"FS",,"%",48.172749,
+"LV Mass AW",,"mg",101.102738,
+"LV Mass AW (Corrected)",,"mg",80.882190,
+"LV Vol;d",,"uL",42.406069,
+"LV Vol;s",,"uL",8.164674,
+
+
+
+"Series Name","Series 36"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","11:08:24 AM"
+"Animal ID","M00695754"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 2","M-Mode","Heart Rate","BPM","512.459163",
+"MAutoLV 2","M-Mode","Temperature","C","37.419046",
+"MAutoLV 2","M-Mode","Diameter;s","mm","2.727145",
+"MAutoLV 2","M-Mode","Diameter;d","mm","3.963925",
+"MAutoLV 2","M-Mode","Volume;s","uL","27.693740",
+"MAutoLV 2","M-Mode","Volume;d","uL","68.515775",
+"MAutoLV 2","M-Mode","Stroke Volume","uL","40.822036",
+"MAutoLV 2","M-Mode","Ejection Fraction","%","59.580491",
+"MAutoLV 2","M-Mode","Fractional Shortening","%","31.200898",
+"MAutoLV 2","M-Mode","Cardiac Output","mL/min","20.919626",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.830392","0.045754","0.798039","0.862745",
+"LVAW;s","M-Mode","Depth","mm","1.488235","3.050265E-02","1.466667","1.509804",
+"LVID;d","M-Mode","Depth","mm","4.076471","9.150794E-02","4.141176","4.011765",
+"LVID;s","M-Mode","Depth","mm","2.631373","9.150794E-02","2.696078","2.566667",
+"LVPW;d","M-Mode","Depth","mm","0.830392","0.106759","0.754902","0.905882",
+"LVPW;s","M-Mode","Depth","mm","1.240196","0.076257","1.186275","1.294118",
+
+Calculation,,Units,
+"EF",,"%",65.378483,
+"FS",,"%",35.449731,
+"LV Mass AW",,"mg",127.525462,
+"LV Mass AW (Corrected)",,"mg",102.020370,
+"LV Vol;d",,"uL",73.217127,
+"LV Vol;s",,"uL",25.348880,
+
+
+
+"Series Name","Series 24"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","9:57:26 AM"
+"Animal ID","M00696231"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 15","M-Mode","Heart Rate","BPM","505.689001",
+"MAutoLV 15","M-Mode","Temperature","C","36.596532",
+"MAutoLV 15","M-Mode","Diameter;s","mm","2.633608",
+"MAutoLV 15","M-Mode","Diameter;d","mm","3.728634",
+"MAutoLV 15","M-Mode","Volume;s","uL","25.403028",
+"MAutoLV 15","M-Mode","Volume;d","uL","59.213273",
+"MAutoLV 15","M-Mode","Stroke Volume","uL","33.810245",
+"MAutoLV 15","M-Mode","Ejection Fraction","%","57.099099",
+"MAutoLV 15","M-Mode","Fractional Shortening","%","29.368028",
+"MAutoLV 15","M-Mode","Cardiac Output","mL/min","17.097469",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.841176","3.050265E-02","0.819608","0.862745",
+"LVAW;s","M-Mode","Depth","mm","1.218627","1.525132E-02","1.207843","1.229412",
+"LVID;d","M-Mode","Depth","mm","3.688235","3.050265E-02","3.709804","3.666667",
+"LVID;s","M-Mode","Depth","mm","2.642157","4.575397E-02","2.674510","2.609804",
+"LVPW;d","M-Mode","Depth","mm","0.916667","1.525132E-02","0.905882","0.927451",
+"LVPW;s","M-Mode","Depth","mm","1.207843","3.050265E-02","1.186275","1.229412",
+
+Calculation,,Units,
+"EF",,"%",55.608978,
+"FS",,"%",28.362564,
+"LV Mass AW",,"mg",117.260027,
+"LV Mass AW (Corrected)",,"mg",93.808022,
+"LV Vol;d",,"uL",57.684932,
+"LV Vol;s",,"uL",25.606931,
+
+
+
+"Series Name","Series 25"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:05:30 AM"
+"Animal ID","M00696235"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 14","M-Mode","Heart Rate","BPM","511.890337",
+"MAutoLV 14","M-Mode","Temperature","C","37.399208",
+"MAutoLV 14","M-Mode","Diameter;s","mm","3.181636",
+"MAutoLV 14","M-Mode","Diameter;d","mm","4.139259",
+"MAutoLV 14","M-Mode","Volume;s","uL","40.402207",
+"MAutoLV 14","M-Mode","Volume;d","uL","75.923578",
+"MAutoLV 14","M-Mode","Stroke Volume","uL","35.521371",
+"MAutoLV 14","M-Mode","Ejection Fraction","%","46.785692",
+"MAutoLV 14","M-Mode","Fractional Shortening","%","23.135133",
+"MAutoLV 14","M-Mode","Cardiac Output","mL/min","18.183047",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.905882","9.150794E-02","0.970588","0.841176",
+"LVAW;s","M-Mode","Depth","mm","1.272549","0.122011","1.186275","1.358824",
+"LVID;d","M-Mode","Depth","mm","4.054902","0.000000","4.054902","4.054902",
+"LVID;s","M-Mode","Depth","mm","3.159804","4.575397E-02","3.192157","3.127451",
+"LVPW;d","M-Mode","Depth","mm","0.884314","3.050265E-02","0.862745","0.905882",
+"LVPW;s","M-Mode","Depth","mm","0.787255","0.045754","0.754902","0.819608",
+
+Calculation,,Units,
+"EF",,"%",45.062421,
+"FS",,"%",22.074467,
+"LV Mass AW",,"mg",140.077577,
+"LV Mass AW (Corrected)",,"mg",112.062062,
+"LV Vol;d",,"uL",72.301861,
+"LV Vol;s",,"uL",39.720892,
+
+
+
+"Series Name","Series 26"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:10:31 AM"
+"Animal ID","M00695790"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 13","M-Mode","Heart Rate","BPM","473.372781",
+"MAutoLV 13","M-Mode","Temperature","C","36.604162",
+"MAutoLV 13","M-Mode","Diameter;s","mm","2.528552",
+"MAutoLV 13","M-Mode","Diameter;d","mm","3.678246",
+"MAutoLV 13","M-Mode","Volume;s","uL","22.966882",
+"MAutoLV 13","M-Mode","Volume;d","uL","57.313132",
+"MAutoLV 13","M-Mode","Stroke Volume","uL","34.346250",
+"MAutoLV 13","M-Mode","Ejection Fraction","%","59.927366",
+"MAutoLV 13","M-Mode","Fractional Shortening","%","31.256568",
+"MAutoLV 13","M-Mode","Cardiac Output","mL/min","16.258580",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.121569","6.100529E-02","1.078431","1.164706",
+"LVAW;s","M-Mode","Depth","mm","1.499020","1.525132E-02","1.488235","1.509804",
+"LVID;d","M-Mode","Depth","mm","3.548039","4.575397E-02","3.515686","3.580392",
+"LVID;s","M-Mode","Depth","mm","2.480392","0.000000","2.480392","2.480392",
+"LVPW;d","M-Mode","Depth","mm","1.240196","1.525132E-02","1.250980","1.229412",
+"LVPW;s","M-Mode","Depth","mm","1.520588","1.525132E-02","1.509804","1.531373",
+
+Calculation,,Units,
+"EF",,"%",58.359599,
+"FS",,"%",30.091186,
+"LV Mass AW",,"mg",170.311966,
+"LV Mass AW (Corrected)",,"mg",136.249573,
+"LV Vol;d",,"uL",52.564119,
+"LV Vol;s",,"uL",21.887910,
+
+
+
+"Series Name","Series 32"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:44:20 AM"
+"Animal ID","M00695771"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 6","M-Mode","Heart Rate","BPM","517.977264",
+"MAutoLV 6","M-Mode","Temperature","C","37.098586",
+"MAutoLV 6","M-Mode","Diameter;s","mm","2.997122",
+"MAutoLV 6","M-Mode","Diameter;d","mm","3.795080",
+"MAutoLV 6","M-Mode","Volume;s","uL","34.979154",
+"MAutoLV 6","M-Mode","Volume;d","uL","61.784670",
+"MAutoLV 6","M-Mode","Stroke Volume","uL","26.805516",
+"MAutoLV 6","M-Mode","Ejection Fraction","%","43.385383",
+"MAutoLV 6","M-Mode","Fractional Shortening","%","21.026102",
+"MAutoLV 6","M-Mode","Cardiac Output","mL/min","13.884648",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.013725","3.050265E-02","0.992157","1.035294",
+"LVAW;s","M-Mode","Depth","mm","1.477451","4.575397E-02","1.445098","1.509804",
+"LVID;d","M-Mode","Depth","mm","3.558824","9.150794E-02","3.494118","3.623529",
+"LVID;s","M-Mode","Depth","mm","2.771569","0.106759","2.847059","2.696078",
+"LVPW;d","M-Mode","Depth","mm","1.056863","3.050265E-02","1.078431","1.035294",
+"LVPW;s","M-Mode","Depth","mm","1.153922","7.625661E-02","1.100000","1.207843",
+
+Calculation,,Units,
+"EF",,"%",45.575332,
+"FS",,"%",22.121212,
+"LV Mass AW",,"mg",140.390510,
+"LV Mass AW (Corrected)",,"mg",112.312408,
+"LV Vol;d",,"uL",52.948909,
+"LV Vol;s",,"uL",28.817268,
+
+
+
+"Series Name","Series 27"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:18:06 AM"
+"Animal ID","M00695700"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 12","M-Mode","Heart Rate","BPM","484.287559",
+"MAutoLV 12","M-Mode","Temperature","C","37.371740",
+"MAutoLV 12","M-Mode","Diameter;s","mm","2.424972",
+"MAutoLV 12","M-Mode","Diameter;d","mm","3.188002",
+"MAutoLV 12","M-Mode","Volume;s","uL","20.690981",
+"MAutoLV 12","M-Mode","Volume;d","uL","40.593388",
+"MAutoLV 12","M-Mode","Stroke Volume","uL","19.902407",
+"MAutoLV 12","M-Mode","Ejection Fraction","%","49.028692",
+"MAutoLV 12","M-Mode","Fractional Shortening","%","23.934430",
+"MAutoLV 12","M-Mode","Cardiac Output","mL/min","9.638488",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.798039","6.100529E-02","0.754902","0.841176",
+"LVAW;s","M-Mode","Depth","mm","1.272549","0.152513","1.164706","1.380392",
+"LVID;d","M-Mode","Depth","mm","3.310784","7.625661E-02","3.364706","3.256863",
+"LVID;s","M-Mode","Depth","mm","2.491176","4.575397E-02","2.523529","2.458824",
+"LVPW;d","M-Mode","Depth","mm","0.765686","1.525132E-02","0.776471","0.754902",
+"LVPW;s","M-Mode","Depth","mm","1.013725","6.100529E-02","1.056863","0.970588",
+
+Calculation,,Units,
+"EF",,"%",50.260303,
+"FS",,"%",24.755707,
+"LV Mass AW",,"mg",83.747146,
+"LV Mass AW (Corrected)",,"mg",66.997717,
+"LV Vol;d",,"uL",44.483080,
+"LV Vol;s",,"uL",22.125749,
+
+
+
+"Series Name","Series 28"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:23:25 AM"
+"Animal ID","M00696279"
+"Sex","female"
+"Pregnant","no"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","1.682353","9.150794E-02","1.617647","1.747059",
+"LVAW;s","M-Mode","Depth","mm","2.102941","1.525132E-02","2.113725","2.092157",
+"LVID;d","M-Mode","Depth","mm","2.944118","1.525132E-02","2.933333","2.954902",
+"LVID;s","M-Mode","Depth","mm","1.725490","3.050265E-02","1.703922","1.747059",
+"LVPW;d","M-Mode","Depth","mm","0.873529","7.625661E-02","0.927451","0.819608",
+"LVPW;s","M-Mode","Depth","mm","1.401961","0.000000","1.401961","1.401961",
+
+Calculation,,Units,
+"EF",,"%",73.922126,
+"FS",,"%",41.391955,
+"LV Mass AW",,"mg",148.321245,
+"LV Mass AW (Corrected)",,"mg",118.656996,
+"LV Vol;d",,"uL",33.426249,
+"LV Vol;s",,"uL",8.716855,
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 11","M-Mode","Heart Rate","BPM","537.056928",
+"MAutoLV 11","M-Mode","Temperature","C","37.304596",
+"MAutoLV 11","M-Mode","Diameter;s","mm","1.741103",
+"MAutoLV 11","M-Mode","Diameter;d","mm","3.120033",
+"MAutoLV 11","M-Mode","Volume;s","uL","8.931669",
+"MAutoLV 11","M-Mode","Volume;d","uL","38.535622",
+"MAutoLV 11","M-Mode","Stroke Volume","uL","29.603954",
+"MAutoLV 11","M-Mode","Ejection Fraction","%","76.822306",
+"MAutoLV 11","M-Mode","Fractional Shortening","%","44.195997",
+"MAutoLV 11","M-Mode","Cardiac Output","mL/min","15.899008",
+
+
+"Series Name","Series 29"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:28:09 AM"
+"Animal ID","M00696275"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 9","M-Mode","Heart Rate","BPM","373.754153",
+"MAutoLV 9","M-Mode","Temperature","C","36.878842",
+"MAutoLV 9","M-Mode","Diameter;s","mm","2.926255",
+"MAutoLV 9","M-Mode","Diameter;d","mm","4.013309",
+"MAutoLV 9","M-Mode","Volume;s","uL","32.943506",
+"MAutoLV 9","M-Mode","Volume;d","uL","70.562910",
+"MAutoLV 9","M-Mode","Stroke Volume","uL","37.619405",
+"MAutoLV 9","M-Mode","Ejection Fraction","%","53.313284",
+"MAutoLV 9","M-Mode","Fractional Shortening","%","27.086214",
+"MAutoLV 9","M-Mode","Cardiac Output","mL/min","14.060409",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.830392","7.625661E-02","0.884314","0.776471",
+"LVAW;s","M-Mode","Depth","mm","1.153922","0.106759","1.229412","1.078431",
+"LVID;d","M-Mode","Depth","mm","4.033333","9.150794E-02","3.968627","4.098039",
+"LVID;s","M-Mode","Depth","mm","2.965686","1.525132E-02","2.976471","2.954902",
+"LVPW;d","M-Mode","Depth","mm","0.787255","0.045754","0.819608","0.754902",
+"LVPW;s","M-Mode","Depth","mm","1.056863","0.000000","1.056863","1.056863",
+
+Calculation,,Units,
+"EF",,"%",52.335610,
+"FS",,"%",26.470589,
+"LV Mass AW",,"mg",120.929299,
+"LV Mass AW (Corrected)",,"mg",96.743439,
+"LV Vol;d",,"uL",71.392772,
+"LV Vol;s",,"uL",34.028929,
+
+
+
+"Series Name","Series 30"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:34:17 AM"
+"Animal ID","M00695656"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 8","M-Mode","Heart Rate","BPM","452.898551",
+"MAutoLV 8","M-Mode","Temperature","C","36.501920",
+"MAutoLV 8","M-Mode","Diameter;s","mm","3.400621",
+"MAutoLV 8","M-Mode","Diameter;d","mm","4.094367",
+"MAutoLV 8","M-Mode","Volume;s","uL","47.463064",
+"MAutoLV 8","M-Mode","Volume;d","uL","74.031824",
+"MAutoLV 8","M-Mode","Stroke Volume","uL","26.568761",
+"MAutoLV 8","M-Mode","Ejection Fraction","%","35.888297",
+"MAutoLV 8","M-Mode","Fractional Shortening","%","16.943925",
+"MAutoLV 8","M-Mode","Cardiac Output","mL/min","12.032953",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.916667","1.525132E-02","0.905882","0.927451",
+"LVAW;s","M-Mode","Depth","mm","1.218627","4.575397E-02","1.250980","1.186275",
+"LVID;d","M-Mode","Depth","mm","4.216667","4.575397E-02","4.249020","4.184314",
+"LVID;s","M-Mode","Depth","mm","3.278431","0.061005","3.321569","3.235294",
+"LVPW;d","M-Mode","Depth","mm","1.164706","0.000000","1.164706","1.164706",
+"LVPW;s","M-Mode","Depth","mm","1.466667","3.050265E-02","1.445098","1.488235",
+
+Calculation,,Units,
+"EF",,"%",45.235245,
+"FS",,"%",22.250654,
+"LV Mass AW",,"mg",184.106702,
+"LV Mass AW (Corrected)",,"mg",147.285362,
+"LV Vol;d",,"uL",79.317073,
+"LV Vol;s",,"uL",43.437801,
+
+
+
+"Series Name","Series 37"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","11:12:40 AM"
+"Animal ID","M00695682"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 1","M-Mode","Heart Rate","BPM","558.693898",
+"MAutoLV 1","M-Mode","Temperature","C","37.271024",
+"MAutoLV 1","M-Mode","Diameter;s","mm","2.627975",
+"MAutoLV 1","M-Mode","Diameter;d","mm","3.601123",
+"MAutoLV 1","M-Mode","Volume;s","uL","25.276952",
+"MAutoLV 1","M-Mode","Volume;d","uL","54.490062",
+"MAutoLV 1","M-Mode","Stroke Volume","uL","29.213110",
+"MAutoLV 1","M-Mode","Ejection Fraction","%","53.611812",
+"MAutoLV 1","M-Mode","Fractional Shortening","%","27.023444",
+"MAutoLV 1","M-Mode","Cardiac Output","mL/min","16.321186",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.927451","6.100529E-02","0.884314","0.970588",
+"LVAW;s","M-Mode","Depth","mm","1.304902","0.076257","1.250980","1.358824",
+"LVID;d","M-Mode","Depth","mm","3.569608","4.575397E-02","3.601961","3.537255",
+"LVID;s","M-Mode","Depth","mm","2.491176","7.625661E-02","2.437255","2.545098",
+"LVPW;d","M-Mode","Depth","mm","1.412745","7.625661E-02","1.466667","1.358824",
+"LVPW;s","M-Mode","Depth","mm","1.779412","7.625661E-02","1.833333","1.725490",
+
+Calculation,,Units,
+"EF",,"%",58.515661,
+"FS",,"%",30.211497,
+"LV Mass AW",,"mg",169.448999,
+"LV Mass AW (Corrected)",,"mg",135.559199,
+"LV Vol;d",,"uL",53.335185,
+"LV Vol;s",,"uL",22.125749,
+
+
+
+"Series Name","Series 33"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","10:48:04 AM"
+"Animal ID","M00695781"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 5","M-Mode","Heart Rate","BPM","332.704891",
+"MAutoLV 5","M-Mode","Temperature","C","37.022286",
+"MAutoLV 5","M-Mode","Diameter;s","mm","3.189440",
+"MAutoLV 5","M-Mode","Diameter;d","mm","4.019480",
+"MAutoLV 5","M-Mode","Volume;s","uL","40.632634",
+"MAutoLV 5","M-Mode","Volume;d","uL","70.831086",
+"MAutoLV 5","M-Mode","Stroke Volume","uL","30.198451",
+"MAutoLV 5","M-Mode","Ejection Fraction","%","42.634461",
+"MAutoLV 5","M-Mode","Fractional Shortening","%","20.650438",
+"MAutoLV 5","M-Mode","Cardiac Output","mL/min","10.047172",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.787255","0.045754","0.819608","0.754902",
+"LVAW;s","M-Mode","Depth","mm","1.132353","4.575397E-02","1.100000","1.164706",
+"LVID;d","M-Mode","Depth","mm","4.000980","1.525132E-02","3.990196","4.011765",
+"LVID;s","M-Mode","Depth","mm","3.192157","0.122011","3.278431","3.105882",
+"LVPW;d","M-Mode","Depth","mm","0.798039","9.150794E-02","0.862745","0.733333",
+"LVPW;s","M-Mode","Depth","mm","0.830392","1.525132E-02","0.819608","0.841176",
+
+Calculation,,Units,
+"EF",,"%",41.867273,
+"FS",,"%",20.215622,
+"LV Mass AW",,"mg",116.125650,
+"LV Mass AW (Corrected)",,"mg",92.900520,
+"LV Vol;d",,"uL",70.040738,
+"LV Vol;s",,"uL",40.716591,
+
+
+
+"Series Name","Series 35"
+"Acquired By","Sheraz Pasha"
+"Series Date","5/12/2022"
+"Series Time","11:02:28 AM"
+"Animal ID","M00696206"
+"Sex","male"
+"Series Notes",""
+"Application","Cardiology"
+"Measurement Package","Cardiac Package"
+"Color",""
+"Strain",""
+"Source",""
+"Weight",""
+"Type",""
+"Date of Birth",""
+"Temperature",""
+"Heart Rate",""
+"Anesthetic Type",""
+"Anesthetic On",""
+"Anesthetic Off",""
+"Protocol ID",""
+"Protocol Name",""
+"Injectable",""
+"Injection Site",""
+"Injection Amount",""
+
+
+
+"Measurement File","VSI_GenericPackage.sxml"
+"Measurement Version","0"
+"Measurement Description","Generic Package"
+
+,,,
+"Measurement","Mode","Parameter","Units","Value"
+"MAutoLV 3","M-Mode","Heart Rate","BPM","475.586557",
+"MAutoLV 3","M-Mode","Temperature","C","36.996344",
+"MAutoLV 3","M-Mode","Diameter;s","mm","3.001907",
+"MAutoLV 3","M-Mode","Diameter;d","mm","3.940101",
+"MAutoLV 3","M-Mode","Volume;s","uL","35.064205",
+"MAutoLV 3","M-Mode","Volume;d","uL","67.561530",
+"MAutoLV 3","M-Mode","Stroke Volume","uL","32.497324",
+"MAutoLV 3","M-Mode","Ejection Fraction","%","48.100338",
+"MAutoLV 3","M-Mode","Fractional Shortening","%","23.811408",
+"MAutoLV 3","M-Mode","Cardiac Output","mL/min","15.455291",
+
+"Measurement File","VSI_CardiacPackage.sxml"
+"Measurement Version","5"
+"Measurement Description","Cardiac Package"
+
+"Protocol Name","SAX M-Mode"
+,,,
+"Measurement","Mode","Parameter","Units","Avg","STD","Instance 1","Instance 2"
+"LVAW;d","M-Mode","Depth","mm","0.905882","3.050265E-02","0.884314","0.927451",
+"LVAW;s","M-Mode","Depth","mm","1.197059","1.525132E-02","1.207843","1.186275",
+"LVID;d","M-Mode","Depth","mm","3.785294","1.525132E-02","3.774510","3.796078",
+"LVID;s","M-Mode","Depth","mm","2.890196","3.050265E-02","2.868627","2.911765",
+"LVPW;d","M-Mode","Depth","mm","0.819608","3.050265E-02","0.841176","0.798039",
+"LVPW;s","M-Mode","Depth","mm","0.959804","1.525132E-02","0.970588","0.949020",
+
+Calculation,,Units,
+"EF",,"%",47.955885,
+"FS",,"%",23.646723,
+"LV Mass AW",,"mg",119.113433,
+"LV Mass AW (Corrected)",,"mg",95.290746,
+"LV Vol;d",,"uL",61.381365,
+"LV Vol;s",,"uL",31.945388,
+
+
+
