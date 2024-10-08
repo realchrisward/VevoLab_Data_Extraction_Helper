@@ -11,7 +11,7 @@ dependencies = [
   "numpy",
   "pandas",
   "pingouin",
-  "PyQt6",
+  "PySide6",
   "scipy",
   "seaborn",
   "statsmodels",
