@@ -4,7 +4,7 @@ VDEH_controller
 
 """
 
-__component_version__ = "1.2"
+__component_version__ = "1.3"
 __license__ = "MIT License"
 
 
@@ -90,7 +90,7 @@ class VDEH_Logger:
         gui_color: str = None,
         gui_style: str = None,
     ):
-        print(level)
+
         if type(level) is not int:
             if type(level) is not str:
                 old_level = level
@@ -106,7 +106,7 @@ class VDEH_Logger:
             old_level = level
             message += f" |Abnormal log level provided: {old_level}|"
             level = 40
-        print(level)
+
         self.logger.log(level, message)
         if level >= self.gui_loglevel and self.gui_handler:
             if not gui_color:
@@ -137,19 +137,14 @@ class VDEH_Logger:
 class vdeh_main_window(QMainWindow):
     def __init__(self, ui, model, loader):
         super(vdeh_main_window, self).__init__()
-        # print("preparing ui file")
-        # ui_file = QFile("gui/vdeh_form_lite.ui")
-        # self.ui = loader.load(ui_file)
-        # print("ui loaded")
-        # self.ui.show()
-        # print("ui test")
-        # uic.loadUi("./gui/vdeh_form_lite.ui", self)
+
+        self.ui = ui
 
         # migrate ui children to parent level of class
         for att, val in ui.__dict__.items():
             setattr(self, att, val)
 
-        self.setWindowTitle("VevoLab Data Extraction Helper")
+        self.ui.setWindowTitle("VevoLab Data Extraction Helper")
 
         # self.setupUi(MainWindow)
         self.model = model
@@ -309,8 +304,8 @@ class vdeh_main_window(QMainWindow):
 
     def action_extract_data(self):
         self.model.check_data(self.model)
-        print(self.model.column_names)
-        print(self.model.model_data)
+        # print(self.model.column_names)
+        # print(self.model.model_data)
 
     def action_extract_data_and_save(self):
         if not self.model.output_path:
@@ -318,8 +313,8 @@ class vdeh_main_window(QMainWindow):
                 "warning", "no output path - unable to extract and save data"
             )
         else:
-            print(self.model.column_names)
-            print(self.model.model_data)
+            # print(self.model.column_names)
+            # print(self.model.model_data)
             self.model.check_data(self.model)
 
             simple_export(

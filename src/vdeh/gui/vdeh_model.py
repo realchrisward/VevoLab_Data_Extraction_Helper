@@ -281,7 +281,7 @@ def simple_export(dict_of_dfs, output_path, logger=None):
 
     try:
         for k, v in dict_of_dfs.items():
-            v.to_excel(writer, k, index=False)
+            v.to_excel(writer, sheet_name=k, index=False)
         writer.close()
         if logger:
             logger.log(f"Data Saved to file - {output_path}")
