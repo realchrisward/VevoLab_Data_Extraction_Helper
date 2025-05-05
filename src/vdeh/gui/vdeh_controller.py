@@ -4,7 +4,7 @@ VDEH_controller
 
 """
 
-__component_version__ = "1.3"
+__component_version__ = "1.4"
 __license__ = "MIT License"
 
 
@@ -16,7 +16,7 @@ from .vdeh_model import simple_export
 from PySide6.QtWidgets import QFileDialog, QListWidgetItem, QMessageBox
 from PySide6.QtWidgets import QTextEdit, QMainWindow
 
-
+import os
 import pandas
 import logging
 import sys
@@ -49,6 +49,7 @@ class VDEH_Logger:
 
         self.gui_handler = gui_handler
         self.gui_loglevel = self.fix_level(gui_loglevel)
+        self.gui_handler.setStyleSheet("background-color: white;")
 
         # create format for log and apply to handlers
         log_format = logging.Formatter(
@@ -147,7 +148,7 @@ class vdeh_main_window(QMainWindow):
         self.ui.setWindowTitle("VevoLab Data Extraction Helper")
 
         # self.setupUi(MainWindow)
-        self.model = model
+        self.model = model()
 
         self.logger = VDEH_Logger(
             gui_loglevel=self.model.log_level,
@@ -315,7 +316,7 @@ class vdeh_main_window(QMainWindow):
         else:
             # print(self.model.column_names)
             # print(self.model.model_data)
-            self.model.check_data(self.model)
+            self.model.check_data()
 
             simple_export(
                 {"simple_summary": self.model.model_data}, self.model.output_path
@@ -333,7 +334,7 @@ class vdeh_main_window(QMainWindow):
 
     def action_user_manual(self):
         self.logger.log("info", "Help -> User Manual")
-        webbrowser.open("docs\index.html")
+        webbrowser.open(f"{os.path.join(self.model.root_dir, "docs", "index.html")}")
 
     def action_about(self):
         QMessageBox.information(

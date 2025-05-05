@@ -6,8 +6,8 @@ VevoLab Data Extraction Helper
 @author: Chris Ward (C) 2021
 
 
-This program provides and interface for the user to select exported data from 
-VevoLab as well as create metadata and analysis settings information to 
+This program provides and interface for the user to select exported data from
+VevoLab as well as create metadata and analysis settings information to
 generate easily read reports
 
 *inputs - used if run from the command line
@@ -20,16 +20,16 @@ metadata_path : path to the excel file (.xlsx) that contains metadata and
     ...[DerivedData,ColumnNames]...
     (GUI tool helps user to select this file)
     *Animal_Data - table with columns for between subjects metadata - MUST
-        CONTAIN 'Animal ID' column as this is the key used to link this data 
+        CONTAIN 'Animal ID' column as this is the key used to link this data
         with the VevoLab Data
-    *Timepoint_Data - table allowing the user to categorize the timepoints in 
+    *Timepoint_Data - table allowing the user to categorize the timepoints in
         their study with a column for the Timepoint and a column for the data
-        (date values need to match the dates found in the VevoLab data in order 
+        (date values need to match the dates found in the VevoLab data in order
         to link with this table)
     *Derived_Data - table indicating if any calculations of derived data such
-        as age, post treatment time, or time in study ar needed. If the 
+        as age, post treatment time, or time in study ar needed. If the
         derived data are calculated, they may be used in the stats/graphs. If
-        neccessary data for their calculation are missing an error will be 
+        neccessary data for their calculation are missing an error will be
         raised when attempting to calculate the values, and the stats/graphs
         may not be created
     *Column_Names - table indicating preferred name for columns in the output
@@ -37,28 +37,28 @@ metadata_path : path to the excel file (.xlsx) that contains metadata and
         problems.
     *Model - single column table indicating the factors to use for statistical
         analysis and for clustering data on plots
-        (default sorting order of clustering variables is ascending, which 
+        (default sorting order of clustering variables is ascending, which
         populates the graph from bottom up)
 
-output_path : path to folder and filename for the excel summary that will be 
+output_path : path to folder and filename for the excel summary that will be
     produced - this will also be a prefix for the graph files that are produced
     (GUI tool helps user to select/name this file)
-    
-    
+
+
 !Warnings! - it is possible to create errors if columns in the data have names
 that include reserved 'patterns' of characters
 Currently reserved patterns:
     * '__F{}__'
 
-!Warnings! - measurement names that end in a number are assumed to be 
-technical replicates of a measurement name that precedes the number. If 
-manually naming measurements, keep this in mind. (extraction of AutoLV data 
+!Warnings! - measurement names that end in a number are assumed to be
+technical replicates of a measurement name that precedes the number. If
+manually naming measurements, keep this in mind. (extraction of AutoLV data
 requires this behavior)
 
 """
 
 
-__version__ = "5.4.4"
+__version__ = "5.4.5"
 __license__ = "MIT License"
 __license_text__ = """
 MIT License
@@ -172,6 +172,7 @@ def main():
             "vdeh gui": vdeh_controller.__component_version__,
             "vdeh subguis": vdeh_subgui_controller.__component_version__,
         }
+        ui.model.root_dir = os.path.dirname(__file__)
 
         # if user specified --dev or --loglevel update model
         if args.dev:
