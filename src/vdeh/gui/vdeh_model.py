@@ -189,8 +189,8 @@ def collect_data(report_paths, logger=None):
                         column_names["MetaData Fields"].append(columns[0])
                         report_dict[rows[0]][columns[0]] = ",".join(columns[1:])
 
-                        if i == 0:
-                            study_dict[columns[0]] = columns[1]
+                        # if i == 0:
+                        #     study_dict[columns[0]] = columns[1]
 
                     elif FLAG_notes > 0:
                         if FLAG_notes == 1:
@@ -225,7 +225,7 @@ def collect_data(report_paths, logger=None):
                             # if measurement is number suffixed, grab the
                             # initial portion
                             columns[0] = re.search(
-                                "(?P<text>.*?)(?P<digit>\d+$)", columns[0]
+                                r"(?P<text>.*?)(?P<digit>\d+$)", columns[0]
                             ).group("text")
                         column_names[
                             "VevoLab Measurement_Mode_Parameter or Calculation"
@@ -296,28 +296,31 @@ def simple_export(dict_of_dfs, output_path, logger=None):
 # %% define classes
 
 
-@dataclass
-class vdeh_model:
-    # logging queue:
-    logger: None = None
 
-    # paths
-    input_paths: list = None
-    output_path: str = str()
-    settings_path: str = str()
+class model:
+    def __init__(self):
+        self.log_level = "INFO"
+        self.log_file_path = str()
+        
+        # logging queue:
+        self.logger= None
 
-    # settings
-    animal_data: pandas.DataFrame = pandas.DataFrame()
-    timepoint_data: pandas.DataFrame = pandas.DataFrame()
-    derived_data: pandas.DataFrame = pandas.DataFrame()
-    column_names: pandas.DataFrame = pandas.DataFrame()
-    model_data: pandas.DataFrame = pandas.DataFrame()
-    model: pandas.DataFrame = pandas.DataFrame()
+        # paths
+        self.input_paths= None
+        self.output_path=str()
+        self.settings_path = str()
 
-    settings_changed: bool = False
-    version_info: str = str()
-    log_level: str = "INFO"
-    log_file_path: str = str()
+        # settings
+        self.animal_data =pandas.DataFrame()
+        self.timepoint_data = pandas.DataFrame()
+        self.derived_data = pandas.DataFrame()
+        self.column_names = pandas.DataFrame()
+        self.model_data = pandas.DataFrame()
+        self.model = pandas.DataFrame()
+
+        self.settings_changed = False
+        self.version_info = str()
+        
 
     def load_logger(self, logger):
         self.logger = logger
@@ -474,7 +477,7 @@ class vdeh_model:
                                 # if measurement is number suffixed, grab the
                                 # initial portion
                                 columns[0] = re.search(
-                                    "(?P<text>.*?)(?P<digit>\d+$)", columns[0]
+                                    r"(?P<text>.*?)(?P<digit>\d+$)", columns[0]
                                 ).group("text")
                             # place the data
                             if "_".join(columns[0:3]) in report_dict[rows[0]]:
@@ -744,7 +747,7 @@ class vdeh_model:
                 group_splits = list(secondary_df[split_var].unique())
                 group_splits.sort()
 
-                col_split = re.compile("(((?P<col>.+)_\[(?P<tp>.*)\])|((?P<alt>.+)))")
+                col_split = re.compile(r"(((?P<col>.+)_\[(?P<tp>.*)\])|((?P<alt>.+)))")
 
                 tertiery_df = secondary_df[secondary_df[split_var] == group_splits[0]]
                 new_cols = []
