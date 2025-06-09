@@ -10,7 +10,11 @@ __license__ = "MIT License"
 
 # %% import modules/libraries
 # from .vdeh_form import Ui_MainWindow
-from .vdeh_model import simple_export
+try:
+    from vdeh_model import simple_export
+
+except:
+    from .vdeh_model import simple_export
 
 # from PySide6 import uic
 from PySide6.QtWidgets import QFileDialog, QListWidgetItem, QMessageBox
@@ -303,7 +307,7 @@ class vdeh_main_window(QMainWindow):
         self.logger.log("info", "Output location cleared")
 
     def action_extract_data(self):
-        self.model.check_data(self.model)
+        self.model.check_data()
         # print(self.model.column_names)
         # print(self.model.model_data)
 
@@ -315,7 +319,7 @@ class vdeh_main_window(QMainWindow):
         else:
             # print(self.model.column_names)
             # print(self.model.model_data)
-            self.model.check_data(self.model)
+            self.model.check_data()
 
             simple_export(
                 {"simple_summary": self.model.model_data}, self.model.output_path
@@ -333,7 +337,7 @@ class vdeh_main_window(QMainWindow):
 
     def action_user_manual(self):
         self.logger.log("info", "Help -> User Manual")
-        webbrowser.open("docs\index.html")
+        webbrowser.open("docs\\index.html")
 
     def action_about(self):
         QMessageBox.information(
