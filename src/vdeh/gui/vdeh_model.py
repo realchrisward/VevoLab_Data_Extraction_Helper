@@ -3,7 +3,7 @@
 VDEH_model
 """
 
-__component_version__ = "1.2"
+__component_version__ = "1.4"
 __license__ = "MIT License"
 
 # %% import modules/libraries
@@ -186,11 +186,10 @@ def collect_data(report_paths, logger=None):
                         and FLAG_version == 0
                         and FLAG_notes == 0
                     ):
+                        if logger and columns[0] == "Animal ID":
+                            logger.log("info", f"{rows[0]},{columns}")
                         column_names["MetaData Fields"].append(columns[0])
                         report_dict[rows[0]][columns[0]] = ",".join(columns[1:])
-
-                        # if i == 0:
-                        #     study_dict[columns[0]] = columns[1]
 
                     elif FLAG_notes > 0:
                         if FLAG_notes == 1:
@@ -225,7 +224,7 @@ def collect_data(report_paths, logger=None):
                             # if measurement is number suffixed, grab the
                             # initial portion
                             columns[0] = re.search(
-                                r"(?P<text>.*?)(?P<digit>\d+$)", columns[0]
+                                "(?P<text>.*?)(?P<digit>[0-9]+$)", columns[0]
                             ).group("text")
                         column_names[
                             "VevoLab Measurement_Mode_Parameter or Calculation"
@@ -237,6 +236,7 @@ def collect_data(report_paths, logger=None):
                             )
                         else:
                             report_dict[rows[0]]["_".join(columns[0:3])] = [columns[4]]
+
                 for k, v in study_dict.items():
                     report_dict[rows[0]][k] = v
 
@@ -296,22 +296,19 @@ def simple_export(dict_of_dfs, output_path, logger=None):
 # %% define classes
 
 
-
-class model:
+class vdeh_model:
     def __init__(self):
-        self.log_level = "INFO"
-        self.log_file_path = str()
-        
         # logging queue:
-        self.logger= None
+        self.logger = None
+        self.test = 3
 
         # paths
-        self.input_paths= None
-        self.output_path=str()
-        self.settings_path = str()
+        self.input_paths = None
+        self.output_path = ""
+        self.settings_path = ""
 
         # settings
-        self.animal_data =pandas.DataFrame()
+        self.animal_data = pandas.DataFrame()
         self.timepoint_data = pandas.DataFrame()
         self.derived_data = pandas.DataFrame()
         self.column_names = pandas.DataFrame()
@@ -319,8 +316,9 @@ class model:
         self.model = pandas.DataFrame()
 
         self.settings_changed = False
-        self.version_info = str()
-        
+        self.version_info = ""
+        self.log_level = "INFO"
+        self.log_file_path = ""
 
     def load_logger(self, logger):
         self.logger = logger
@@ -412,6 +410,7 @@ class model:
             primary_df = pandas.DataFrame()
             Study_Name = ""
             for current_file in self.report_path:
+
                 if self.logger:
                     self.logger.log("info", f"working on {current_file}")
                 with open(current_file, "r") as opfi:
@@ -423,8 +422,8 @@ class model:
 
                     rows = []
                     rows = b.split("\n")
-
-                    for r in b.split("\n"):
+                    self.logger.log("info", rows)
+                    for r in rows:
                         columns = []
                         columns = r.split(",")
                         if columns[0] == "Study Name":
@@ -435,7 +434,8 @@ class model:
                     FLAG_measurements = 0
                     FLAG_notes = 0
 
-                    for r in b.split("\n"):
+                    for r in rows:
+                        self.logger.log("info", r)
                         columns = []
                         columns = r.split(",")
 
@@ -477,7 +477,7 @@ class model:
                                 # if measurement is number suffixed, grab the
                                 # initial portion
                                 columns[0] = re.search(
-                                    r"(?P<text>.*?)(?P<digit>\d+$)", columns[0]
+                                    "(?P<text>.*?)(?P<digit>[0-9]+$)", columns[0]
                                 ).group("text")
                             # place the data
                             if "_".join(columns[0:3]) in report_dict[rows[0]]:
@@ -495,6 +495,8 @@ class model:
                             )
 
                         if columns[0] == "Animal ID":
+                            print(rows[0])
+                            print(columns)
                             report_dict[rows[0]][columns[0]] = columns[1]
                             report_dict[rows[0]]["Study Name"] = Study_Name
                             report_dict[rows[0]]["Series Name"] = rows[0]
@@ -747,7 +749,7 @@ class model:
                 group_splits = list(secondary_df[split_var].unique())
                 group_splits.sort()
 
-                col_split = re.compile(r"(((?P<col>.+)_\[(?P<tp>.*)\])|((?P<alt>.+)))")
+                col_split = re.compile("(((?P<col>.+)_[[](?P<tp>.*)[]])|((?P<alt>.+)))")
 
                 tertiery_df = secondary_df[secondary_df[split_var] == group_splits[0]]
                 new_cols = []
