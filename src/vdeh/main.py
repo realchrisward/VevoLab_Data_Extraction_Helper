@@ -88,7 +88,8 @@ SOFTWARE.
 # import gui
 try:
     from gui import vdeh_controller, vdeh_model, vdeh_subgui_controller
-except:
+except Exception as e:
+    print(e)
     from .gui import vdeh_controller, vdeh_model, vdeh_subgui_controller
 # import gui.vdeh_controller as vdeh_controller
 # import gui.vdeh_model as vdeh_model
@@ -164,7 +165,7 @@ def main():
 
         window_ui.show()
 
-        ui = vdeh_controller.vdeh_main_window(window_ui, vdeh_model.vdeh_model, loader)
+        ui = vdeh_controller.vdeh_main_window(window_ui, vdeh_model.model(), loader)
 
         ui.model.version_info = {
             "VevoLab Data Extraction Helper": __version__,
